@@ -254,6 +254,51 @@
             padding-left: 15px;
         }
 
+        .how-it-works {
+            margin: 60px 0;
+        }
+
+        .how-it-works h2 {
+            margin-bottom: 40px;
+        }
+
+        .step {
+            background: #111;
+            border-left: 4px solid #00ff41;
+            padding: 30px;
+            margin-bottom: 25px;
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .step:hover {
+            background: #151515;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.15);
+        }
+
+        .step-number {
+            color: #00ff41;
+            font-size: 2.5em;
+            font-weight: bold;
+            min-width: 60px;
+            text-align: center;
+            line-height: 1;
+        }
+
+        .step h3 {
+            color: #00ff41;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .step p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -302,6 +347,99 @@
             font-style: italic;
         }
 
+        .referral-program {
+            margin: 60px 0 50px;
+            background: #0d0d0d;
+            border: 1px solid #00ff41;
+            padding: 40px;
+        }
+
+        .referral-program h2 {
+            margin-bottom: 30px;
+        }
+
+        .referral-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .referral-intro {
+            color: #00ff41;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .referral-content p {
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .referral-examples {
+            background: #111;
+            border-left: 3px solid #00ff41;
+            padding: 20px 30px;
+            margin: 30px 0;
+        }
+
+        .referral-examples h3 {
+            color: #00ff41;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .referral-examples ul {
+            list-style: none;
+        }
+
+        .referral-examples li {
+            color: #aaa;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .referral-examples li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+        }
+
+        .referral-cta {
+            text-align: center;
+            font-size: 1.1em;
+            margin-top: 30px;
+        }
+
+        .referral-cta a {
+            color: #00ff41;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .referral-cta a:hover {
+            text-decoration: underline;
+        }
+
+        .referral-terms {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        .referral-terms a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .referral-terms a:hover {
+            color: #00ff41;
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8em;
@@ -313,6 +451,16 @@
             
             .service {
                 padding: 20px;
+            }
+
+            .step {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            .step-number {
+                font-size: 2em;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -342,6 +490,28 @@
                 <li>Network Mapping & Entity Analysis</li>
                 <li>Expert Witness Support</li>
             </ul>
+        </div>
+
+        <div class="how-it-works">
+            <h2>How It Works</h2>
+            
+            <div class="step">
+                <div class="step-number">[1]</div>
+                <h3>CONSULTATION</h3>
+                <p>We discuss your situation confidentially and determine if investigation services are the right fit. No obligation, no judgment—just clarity on your options and what evidence packages can accomplish for your case.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">[2]</div>
+                <h3>INVESTIGATION & DOCUMENTATION</h3>
+                <p>Systematic intelligence gathering across all relevant platforms using federal-grade OSINT methodology. Subject identification, network mapping, timeline construction, and evidence collection following law enforcement chain of custody protocols.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">[3]</div>
+                <h3>ACTIONABLE DELIVERABLE</h3>
+                <p>You receive a comprehensive investigation package structured for your specific goal—FBI referral, local law enforcement submission, legal proceedings, or protective order support. All evidence documented, indexed, and ready for immediate use.</p>
+            </div>
         </div>
 
         <h2>Services</h2>
@@ -438,6 +608,30 @@
             <p class="testimonial-note">Additional client testimonials available to legal professionals upon request.</p>
         </div>
 
+        <div class="referral-program">
+            <h2>Referral Program</h2>
+            
+            <div class="referral-content">
+                <p class="referral-intro">Refer a client, earn 10% of their first project fee.</p>
+                
+                <p>Know an attorney or advocate who needs federal-grade OSINT investigation? We pay referral bonuses on completed projects.</p>
+                
+                <div class="referral-examples">
+                    <h3>Examples:</h3>
+                    <ul>
+                        <li>$40,000 investigation → $4,000 referral bonus</li>
+                        <li>$20,000 package → $2,000 referral bonus</li>
+                        <li>$10,000 package → $1,000 referral bonus</li>
+                        <li>$5,000 assessment → $500 referral bonus</li>
+                    </ul>
+                </div>
+                
+                <p class="referral-cta">Email referrals to: <a href="mailto:hello@apomarchives.com?subject=Client%20Referral">hello@apomarchives.com</a></p>
+                
+                <p class="referral-terms"><a href="referral-terms.html">View Referral Program Terms</a></p>
+            </div>
+        </div>
+
         <div class="credentials">
             <h2>Credentials</h2>
             <ul>
@@ -464,6 +658,10 @@
         <footer>
             <p>&copy; 2024 APOM Research | Strategic Intelligence Services</p>
             <p style="margin-top: 10px; font-size: 0.9em;">Serving clients globally from secure remote operations</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                <a href="https://www.linkedin.com/company/apom-research" target="_blank" style="color: #00ff41; text-decoration: none;">LinkedIn</a> | 
+                <a href="referral-terms.html" style="color: #00ff41; text-decoration: none;">Referral Program</a>
+            </p>
         </footer>
     </div>
 </body>
