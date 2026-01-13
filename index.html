@@ -299,6 +299,86 @@
             line-height: 1.7;
         }
 
+        .why-not-pi {
+            margin: 60px 0;
+            background: #0d0d0d;
+            border: 2px solid #00ff41;
+            padding: 40px;
+        }
+
+        .why-not-pi h2 {
+            margin-bottom: 30px;
+        }
+
+        .pi-comparison p {
+            color: #ccc;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .comparison-column {
+            background: #111;
+            border-left: 4px solid #00ff41;
+            padding: 25px;
+        }
+
+        .comparison-column h3 {
+            color: #00ff41;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .comparison-column ul {
+            list-style: none;
+        }
+
+        .comparison-column li {
+            color: #aaa;
+            padding: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .comparison-column li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+        }
+
+        .pi-highlight {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 20px;
+            margin: 25px 0;
+            color: #ccc !important;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+
+        .learn-more {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .learn-more a {
+            color: #00ff41;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .learn-more a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -514,6 +594,39 @@
             </div>
         </div>
 
+        <div class="why-not-pi">
+            <h2>Why Digital Evidence Requires More Than a Private Investigator</h2>
+            
+            <div class="pi-comparison">
+                <p>Searching for a PI for your custody case or harassment situation? If your evidence is digital, you need specialized expertise.</p>
+                
+                <div class="comparison-grid">
+                    <div class="comparison-column">
+                        <h3>Traditional PI</h3>
+                        <ul>
+                            <li>Physical surveillance</li>
+                            <li>Background checks</li>
+                            <li>Infidelity cases</li>
+                            <li>Witness interviews</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-column">
+                        <h3>Digital Forensics</h3>
+                        <ul>
+                            <li>Social media forensics</li>
+                            <li>Metadata preservation</li>
+                            <li>Chain of custody</li>
+                            <li>FBI-ready packages</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <p class="pi-highlight">Most harassment, stalking, and manipulation in custody cases happens online. Screenshots don't cut it in court. You need evidence documented to federal standards — with timestamps, metadata, chain of custody, and authentication that withstands legal scrutiny.</p>
+                
+                <p class="learn-more"><a href="digital-evidence.html">Learn why screenshots aren't enough →</a></p>
+            </div>
+        </div>
+
         <h2>Services</h2>
 
         <div class="service">
@@ -628,7 +741,7 @@
                 
                 <p class="referral-cta">Email referrals to: <a href="mailto:hello@apomarchives.com?subject=Client%20Referral">hello@apomarchives.com</a></p>
                 
-                <p class="referral-terms"><a href="referrals.html">View Referral Program Terms</a></p>
+                <p class="referral-terms"><a href="referral-terms.html">View Referral Program Terms</a></p>
             </div>
         </div>
 
