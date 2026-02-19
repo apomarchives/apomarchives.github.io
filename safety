@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free, private cyberstalking safety audit. Check if your accounts, devices, and finances have been compromised. No data stored. Get a personalized action plan in 15 minutes.">
+    <meta name="keywords" content="cyberstalking safety audit, is my ex tracking my phone, is my ex stalking me online, digital safety after divorce, phone security after separation, how to tell if someone is monitoring your phone, am I being cyberstalked, technology-facilitated abuse">
+    <title>Free Cyberstalking Safety Audit | Is Your Ex Tracking You? | APOM Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff41;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 2px solid #00ff41;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        header::before {
+            content: ">";
+            position: absolute;
+            left: 20px;
+            top: 60px;
+            font-size: 24px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ff41;
+            line-height: 1.3;
+        }
+
+        .intro {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 35px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+
+        .intro p {
+            margin-bottom: 20px;
+            color: #ccc;
+            font-size: 1.15em;
+            line-height: 1.9;
+        }
+
+        .intro strong {
+            color: #00ff41;
+        }
+
+        h2 {
+            color: #00ff41;
+            font-size: 1.8em;
+            margin: 50px 0 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2::before {
+            content: "[ ";
+        }
+
+        h2::after {
+            content: " ]";
+        }
+
+        .audit-section {
+            background: #0d0d0d;
+            border: 2px solid #00ff41;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .audit-section h3 {
+            color: #00ff41;
+            font-size: 1.4em;
+            margin-bottom: 20px;
+        }
+
+        .audit-section p {
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .audit-section ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .audit-section li {
+            color: #aaa;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .audit-section li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+            font-weight: bold;
+        }
+
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 20px 50px;
+            background: transparent;
+            border: 3px solid #00ff41;
+            color: #00ff41;
+            font-size: 1.5em;
+            font-family: 'Courier New', monospace;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+        }
+
+        .cta-button:hover {
+            background: #00ff41;
+            color: #0a0a0a;
+            box-shadow: 0 0 40px rgba(0, 255, 65, 0.5);
+        }
+
+        .time-note {
+            text-align: center;
+            color: #888;
+            font-size: 0.95em;
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        .content-section {
+            background: #111;
+            border-left: 4px solid #00ff41;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .content-section h3 {
+            color: #00ff41;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        .content-section p {
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .audience-card {
+            background: #0d0d0d;
+            border: 1px solid #00ff41;
+            padding: 25px;
+        }
+
+        .audience-card h3 {
+            color: #00ff41;
+            margin-bottom: 12px;
+            font-size: 1.1em;
+        }
+
+        .audience-card p {
+            color: #aaa;
+            line-height: 1.7;
+        }
+
+        .next-steps {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .next-steps p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+
+        .next-steps a {
+            color: #00ff41;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .next-steps a:hover {
+            text-decoration: underline;
+        }
+
+        .bio-section {
+            background: #0d0d0d;
+            border-left: 4px solid #00ff41;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .bio-section p {
+            color: #ccc;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .testimonial {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 30px;
+            margin: 30px 0;
+            font-style: italic;
+        }
+
+        .testimonial p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .testimonial .attribution {
+            color: #00ff41;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+            font-style: normal;
+        }
+
+        .share-section {
+            background: #111;
+            border: 2px solid #00ff41;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .share-section h2 {
+            margin-top: 0;
+        }
+
+        .share-section p {
+            color: #ccc;
+            margin: 15px 0;
+            font-size: 1.1em;
+        }
+
+        .share-section .url {
+            color: #00ff41;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: #00ff41;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .back-link a {
+            color: #00ff41;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .cta-button {
+                font-size: 1.2em;
+                padding: 15px 30px;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Is Someone Monitoring<br>Your Digital Life?</h1>
+        </header>
+
+        <div class="intro">
+            <p>Your cursor moves on its own. Files disappear. Your ex seems to know things they shouldn't. You feel like you're going crazy — but you can't prove why.</p>
+            
+            <p><strong>You're not imagining it. And you're not alone.</strong></p>
+            
+            <p>Technology-facilitated abuse — cyberstalking through devices, accounts, and apps — is designed to be invisible. It's designed to make you sound "crazy" when you try to explain it. But it leaves traces, and those traces can be found.</p>
+        </div>
+
+        <h2>The Free Cyberstalking Safety Audit</h2>
+
+        <div class="audit-section">
+            <p>We built a free tool that walks you through checking your own digital security — step by step, in plain language, with specific instructions for what to do about every issue it finds.</p>
+
+            <h3>9 areas covered:</h3>
+            <ul>
+                <li>Apple ID & iCloud access</li>
+                <li>FaceTime & screen sharing risks</li>
+                <li>Vehicle tracking (connected services & GPS)</li>
+                <li>Email interception & forwarding rules</li>
+                <li>Password & account security</li>
+                <li>Social media surveillance, burner accounts & doxxing</li>
+                <li>Children's device security</li>
+                <li>Device health red flags</li>
+                <li>Financial safety & independence</li>
+            </ul>
+
+            <h3>What makes it different:</h3>
+            <ul>
+                <li>Completely private — nothing you enter is stored or sent anywhere. Everything stays on your device.</li>
+                <li>Built by a federal cybersecurity professional who has lived this experience.</li>
+                <li>Attorney-aware — includes evidence preservation warnings so you don't accidentally destroy proof.</li>
+                <li>Gives you a prioritized action plan, not vague advice. Specific steps. Specific settings. Specific phone numbers to call.</li>
+            </ul>
+
+            <a href="https://safety.apomarchives.com" class="cta-button">START YOUR FREE SAFETY AUDIT →</a>
+            
+            <p class="time-note">Takes 15-20 minutes. Skip any section. Come back anytime.</p>
+        </div>
+
+        <h2>Who This Is For</h2>
+
+        <div class="audience-grid">
+            <div class="audience-card">
+                <h3>Survivors</h3>
+                <p>Dealing with an ex who seems to know your every move, a stalker who won't stop, or a partner who controls your access to technology and money.</p>
+            </div>
+
+            <div class="audience-card">
+                <h3>Teens & Young Adults</h3>
+                <p>Dealing with an ex-partner who creates fake accounts, uses friends to monitor you, or won't respect that it's over.</p>
+            </div>
+
+            <div class="audience-card">
+                <h3>Mothers in Custody Disputes</h3>
+                <p>Whose children's devices are being used as surveillance tools — or whose children are being coerced into sharing information about your household.</p>
+            </div>
+
+            <div class="audience-card">
+                <h3>Women Being Proactive</h3>
+                <p>You don't need to be in crisis to lock down your digital life.</p>
+            </div>
+
+            <div class="audience-card">
+                <h3>Attorneys & Advocates</h3>
+                <p>Looking for a resource to hand clients before a full forensic investigation.</p>
+            </div>
+        </div>
+
+        <h2>What Happens After the Audit</h2>
+
+        <div class="next-steps">
+            <p>The safety audit gives you immediate, actionable steps you can take yourself.</p>
+            
+            <p>If your results reveal critical issues — unauthorized device access, active surveillance, financial fraud, or evidence of cyberstalking — you may need professional documentation.</p>
+            
+            <p>APOM Research provides federal-grade digital forensic investigations for family law cases. We take what you've found and document it in a way that courts, attorneys, and law enforcement are forced to take seriously.</p>
+
+            <p style="text-align: center; margin: 30px 0;">
+                <a href="help.html" style="font-size: 1.2em;">LEARN ABOUT PROFESSIONAL INVESTIGATION →</a>
+            </p>
+
+            <p style="text-align: center;">
+                <a href="https://safety.apomarchives.com" style="font-size: 1.2em;">START YOUR FREE SAFETY AUDIT →</a>
+            </p>
+        </div>
+
+        <h2>Built by Someone Who Gets It</h2>
+
+        <div class="bio-section">
+            <p>This tool was created by Kyērstin O'Neal, founder of APOM Research. With a federal cybersecurity background (CISA, Sandia National Labs) and a Georgetown M.S. in Cybersecurity, she brings government-level expertise to protecting families.</p>
+            
+            <p><strong>She also built it because she's been there.</strong></p>
+        </div>
+
+        <div class="testimonial">
+            <p>"Her work gave me something I had lost: hope. I cannot recommend her services strongly enough."</p>
+            <p class="attribution">— Tina Swithin, Author & Family Court Reform Advocate</p>
+        </div>
+
+        <div class="share-section">
+            <h2>Share This Tool</h2>
+            <p>Know someone who might need this? Share this page — or send them directly to the audit:</p>
+            <span class="url">safety.apomarchives.com</span>
+            <p style="margin-top: 20px; font-size: 0.95em; color: #888;">This tool is free, always will be, and no one has to sign up for anything to use it.</p>
+        </div>
+
+        <div class="back-link">
+            <a href="index.html">← Back to APOM Research Home</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 APOM Research. All rights reserved.</p>
+            <p>This tool is for educational purposes and does not constitute legal advice.</p>
+            <p><strong style="color: #ff4141;">If you are in immediate danger, call 911.</strong></p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                <a href="https://www.linkedin.com/company/apom-research" target="_blank">LinkedIn</a> | 
+                <a href="digital-evidence.html">Why Digital Evidence?</a> | 
+                <a href="attorneys.html">For Attorneys</a> | 
+                <a href="survivors.html">For Survivors</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
