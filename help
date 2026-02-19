@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your safety audit found critical issues. APOM Research provides federal-grade digital forensic investigations for family law — documentation that courts are forced to believe.">
+    <meta name="keywords" content="cyberstalking investigation, digital forensics family law, technology-facilitated abuse, professional cyberstalking help">
+    <title>Professional Cyberstalking Investigation & Digital Forensics | APOM Research</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #00ff41;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 2px solid #00ff41;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        header::before {
+            content: ">";
+            position: absolute;
+            left: 20px;
+            top: 60px;
+            font-size: 24px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #00ff41;
+            line-height: 1.3;
+        }
+
+        .intro {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 35px;
+            margin-bottom: 50px;
+            box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+        }
+
+        .intro p {
+            margin-bottom: 20px;
+            color: #ccc;
+            font-size: 1.15em;
+            line-height: 1.9;
+        }
+
+        .intro strong {
+            color: #00ff41;
+        }
+
+        h2 {
+            color: #00ff41;
+            font-size: 1.8em;
+            margin: 50px 0 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h2::before {
+            content: "[ ";
+        }
+
+        h2::after {
+            content: " ]";
+        }
+
+        .content-section {
+            background: #111;
+            border-left: 4px solid #00ff41;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        .content-section ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .content-section li {
+            color: #aaa;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .content-section li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+        }
+
+        .how-it-works {
+            background: #0d0d0d;
+            border: 2px solid #00ff41;
+            padding: 35px;
+            margin: 40px 0;
+        }
+
+        .step {
+            margin: 25px 0;
+            padding: 20px;
+            background: #111;
+            border-left: 3px solid #00ff41;
+        }
+
+        .step h3 {
+            color: #00ff41;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .pricing-card {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            background: #151515;
+            box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+        }
+
+        .pricing-card h3 {
+            color: #00ff41;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .pricing-card .price {
+            color: #00ff41;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .pricing-card .duration {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+
+        .pricing-card p {
+            color: #ccc;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .credentials-box {
+            background: #0d0d0d;
+            border-left: 4px solid #00ff41;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .credentials-box ul {
+            list-style: none;
+        }
+
+        .credentials-box li {
+            color: #aaa;
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .credentials-box li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00ff41;
+        }
+
+        .testimonial {
+            background: #111;
+            border: 1px solid #00ff41;
+            padding: 30px;
+            margin: 40px 0;
+            font-style: italic;
+        }
+
+        .testimonial p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .testimonial .attribution {
+            color: #00ff41;
+            font-weight: bold;
+            text-align: right;
+            margin-top: 20px;
+            font-style: normal;
+        }
+
+        .cta-section {
+            background: #111;
+            border: 2px solid #00ff41;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            color: #ccc;
+            margin-bottom: 25px;
+            font-size: 1.1em;
+        }
+
+        .cta-section a.button {
+            color: #00ff41;
+            text-decoration: none;
+            font-size: 1.3em;
+            border: 2px solid #00ff41;
+            padding: 15px 40px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .cta-section a.button:hover {
+            background: #00ff41;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px #00ff41;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #555;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: #00ff41;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .back-link a {
+            color: #00ff41;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            h2 {
+                font-size: 1.4em;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Audit Found Something.<br>Let's Fix It.</h1>
+        </header>
+
+        <div class="intro">
+            <p>If your safety audit showed critical or at-risk results, what you're experiencing has a name: <strong>technology-facilitated abuse</strong>. It's not in your head. It's in your devices, your accounts, your car, and possibly your children's devices.</p>
+            
+            <p>The audit gave you steps you can take yourself. But some situations require professional documentation — the kind that holds up in court, supports a protective order, or gets referred to law enforcement.</p>
+            
+            <p><strong>That's what we do.</strong></p>
+        </div>
+
+        <h2>What APOM Research Does Differently</h2>
+
+        <div class="content-section">
+            <p><strong>We're not a traditional PI firm.</strong></p>
+            
+            <p>We apply federal-grade cybersecurity methodology — the same protocols used in government investigations — to family law cases. The result is evidence documentation that attorneys can use, courts can trust, and law enforcement can act on.</p>
+
+            <h3 style="color: #00ff41; margin: 20px 0 15px; font-size: 1.2em;">What we deliver:</h3>
+            <ul>
+                <li>Court-ready evidence packages with chain of custody</li>
+                <li>Social media forensics and network mapping</li>
+                <li>Timeline construction and pattern analysis</li>
+                <li>Platform-specific subpoena request templates</li>
+                <li>FBI and law enforcement referral packages</li>
+                <li>Documentation that makes the invisible visible</li>
+            </ul>
+        </div>
+
+        <h2>How It Works</h2>
+
+        <div class="how-it-works">
+            <div class="step">
+                <h3>1. Free Consultation</h3>
+                <p>We talk about what you're experiencing and what the audit revealed. No obligation.</p>
+            </div>
+
+            <div class="step">
+                <h3>2. Scope Assessment</h3>
+                <p>We determine what investigation is needed and provide a clear quote.</p>
+            </div>
+
+            <div class="step">
+                <h3>3. Investigation</h3>
+                <p>We do the technical work — documenting, authenticating, and packaging evidence.</p>
+            </div>
+
+            <div class="step">
+                <h3>4. Deliverable</h3>
+                <p>Your attorney receives a professional evidence package ready for court.</p>
+            </div>
+        </div>
+
+        <h2>Investment</h2>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Rapid Threat Assessment</h3>
+                <p class="price">$1,500 - $3,000</p>
+                <p class="duration">3-5 business days</p>
+                <p>Ideal for restraining order support or initial case assessment.</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Evidence Review & Strategy</h3>
+                <p class="price">$2,500 - $5,000</p>
+                <p class="duration">5-7 business days</p>
+                <p>Assessment of existing evidence with gap analysis.</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Comprehensive Investigation</h3>
+                <p class="price">$7,500 - $15,000</p>
+                <p class="duration">2-4 weeks</p>
+                <p>Multi-platform investigation with pattern analysis and network mapping.</p>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Federal-Grade Investigation</h3>
+                <p class="price">$30,000 - $45,000</p>
+                <p class="duration">4-8 weeks</p>
+                <p>Full-scope investigation producing FBI-ready evidence packages.</p>
+            </div>
+        </div>
+
+        <p style="text-align: center; color: #888; margin-top: 20px;">Payment plans available.</p>
+
+        <h2>Credentials</h2>
+
+        <div class="credentials-box">
+            <ul>
+                <li>M.S. Cybersecurity, Georgetown University</li>
+                <li>Former CISA (Cybersecurity and Infrastructure Security Agency)</li>
+                <li>Former Sandia National Labs</li>
+                <li>CompTIA Security+, CySA+, Network+, A+</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Evidence packages successfully referred to FBI</li>
+            </ul>
+        </div>
+
+        <div class="testimonial">
+            <p>"Her work gave me something I had lost: hope. I cannot recommend her services strongly enough."</p>
+            <p class="attribution">— Tina Swithin, Author & Family Court Reform Advocate</p>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Talk?</h2>
+            <p>Free confidential consultation. No obligation. Just clarity on your options.</p>
+            <a class="button" href="https://calendly.com/apom-research/discovery" target="_blank">SCHEDULE CONSULTATION</a>
+            <a class="button" href="mailto:hello@apomarchives.com">hello@apomarchives.com</a>
+            <p style="margin-top: 25px; font-size: 0.95em;">You don't have to figure this out alone.</p>
+        </div>
+
+        <div class="back-link">
+            <a href="safety.html">← Back to Safety Audit</a> | <a href="index.html">APOM Research Home</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 APOM Research. All rights reserved.</p>
+            <p>I work alongside your attorney to document evidence — I don't provide legal advice.</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">
+                <a href="https://www.linkedin.com/company/apom-research" target="_blank">LinkedIn</a> | 
+                <a href="digital-evidence.html">Why Digital Evidence?</a> | 
+                <a href="attorneys.html">For Attorneys</a> | 
+                <a href="survivors.html">For Survivors</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
