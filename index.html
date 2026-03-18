@@ -6,601 +6,188 @@
     <meta name="description" content="Professional OSINT investigations specializing in harassment documentation, digital evidence collection, and legal support. Cybersecurity-backed intelligence research.">
     <meta name="keywords" content="OSINT investigator, harassment documentation, digital evidence, background check, cyberstalking investigation, divorce investigation, digital forensics">
     <title>APOM Research | Strategic Intelligence Services</title>
-        <script async data-domain="apomarchives.com" src="https://plausible.io/js/pa-9uoWr5m4sewFQ7TusHV2E.js"></script>
+    <link rel="canonical" href="https://apomarchives.com/" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a1a1a'/><text y='.9em' font-size='80' x='10'>🔍</text></svg>">
+    <!-- Open Graph -->
+    <meta property="og:title" content="APOM Research | Strategic Intelligence Services" />
+    <meta property="og:description" content="Professional OSINT investigations specializing in harassment documentation, digital evidence collection, and legal support." />
+    <meta property="og:url" content="https://apomarchives.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="APOM Research" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="APOM Research | Strategic Intelligence Services" />
+    <meta name="twitter:description" content="Professional OSINT investigations specializing in harassment documentation, digital evidence collection, and legal support." />
+    <script async data-domain="apomarchives.com" src="https://plausible.io/js/pa-9uoWr5m4sewFQ7TusHV2E.js"></script>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Courier New', monospace;
-            background: #1a1a1a;
-            color: #C4856C;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px 40px;
-            border-bottom: 2px solid #C4856C;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        header::before {
-            content: ">";
-            position: absolute;
-            left: 20px;
-            top: 60px;
-            font-size: 24px;
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 49% { opacity: 1; }
-            50%, 100% { opacity: 0; }
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(196, 133, 108, 0.5);
-        }
-
-        .tagline {
-            color: #888;
-            font-size: 1.1em;
-            margin-top: 10px;
-        }
-
-        .intro {
-            background: #111;
-            border: 1px solid #C4856C;
-            padding: 30px;
-            margin-bottom: 50px;
-            box-shadow: 0 0 20px rgba(196, 133, 108, 0.1);
-        }
-
-        .intro p {
-            margin-bottom: 15px;
-            color: #ccc;
-        }
-
-        h2 {
-            color: #C4856C;
-            font-size: 2em;
-            margin-bottom: 30px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        h2::before {
-            content: "[ ";
-        }
-
-        h2::after {
-            content: " ]";
-        }
-
-        .service {
-            background: #111;
-            border-left: 4px solid #C4856C;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .service:hover {
-            background: #151515;
-            box-shadow: 0 0 30px rgba(196, 133, 108, 0.2);
-            transform: translateX(5px);
-        }
-
-        .service h3 {
-            color: #C4856C;
-            font-size: 1.5em;
-            margin-bottom: 10px;
-        }
-
-        .service .price {
-            color: #888;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        .service p {
-            color: #ccc;
-            margin-bottom: 15px;
-        }
-
-        .service ul {
-            list-style: none;
-            margin: 15px 0;
-        }
-
-        .service li {
-            color: #aaa;
-            padding-left: 20px;
-            margin-bottom: 8px;
-            position: relative;
-        }
-
-        .service li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #C4856C;
-        }
-
-        .ideal-for {
-            color: #C4856C;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-
-        .credentials {
-            background: #111;
-            border: 1px solid #C4856C;
-            padding: 30px;
-            margin-top: 50px;
-        }
-
-        .credentials h2 {
-            margin-bottom: 20px;
-        }
-
-        .credentials ul {
-            list-style: none;
-        }
-
-        .credentials li {
-            color: #ccc;
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .credentials li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #C4856C;
-        }
-
-        .contact {
-            text-align: center;
-            background: #111;
-            border: 2px solid #C4856C;
-            padding: 40px;
-            margin-top: 50px;
-            margin-bottom: 30px;
-        }
-
-        .contact h2 {
-            margin-bottom: 20px;
-        }
-
-        .contact p {
-            color: #ccc;
-            margin-bottom: 25px;
-            font-size: 1.1em;
-        }
-
-        .contact a.button {
-            color: #C4856C;
-            text-decoration: none;
-            font-size: 1.3em;
-            border: 2px solid #C4856C;
-            padding: 15px 40px;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .contact a.button:hover {
-            background: #C4856C;
-            color: #1a1a1a;
-            box-shadow: 0 0 20px rgba(196, 133, 108, 0.3);
-        }
-
-        .contact .email-display {
-            margin-top: 25px;
-            font-size: 1.1em;
-            color: #C4856C;
-        }
-
-        .contact .email-display a {
-            color: #C4856C;
-            text-decoration: none;
-        }
-
-        .contact .email-display a:hover {
-            text-decoration: underline;
-        }
-
-        .specialization {
-            background: #0d0d0d;
-            border: 1px solid #C4856C;
-            padding: 20px;
-            margin: 30px 0;
-        }
-
-        .specialization h3 {
-            color: #C4856C;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-        }
-
-        .specialization ul {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-        }
-
-        .specialization li {
-            color: #aaa;
-            padding: 10px;
-            background: #111;
-            border-left: 2px solid #C4856C;
-            padding-left: 15px;
-        }
-
-        .how-it-works {
-            margin: 60px 0;
-        }
-
-        .how-it-works h2 {
-            margin-bottom: 40px;
-        }
-
-        .step {
-            background: #111;
-            border-left: 4px solid #C4856C;
-            padding: 30px;
-            margin-bottom: 25px;
-            display: flex;
-            gap: 25px;
-            align-items: flex-start;
-            transition: all 0.3s ease;
-        }
-
-        .step:hover {
-            background: #151515;
-            box-shadow: 0 0 30px rgba(196, 133, 108, 0.15);
-        }
-
-        .step-number {
-            color: #C4856C;
-            font-size: 2.5em;
-            font-weight: bold;
-            min-width: 60px;
-            text-align: center;
-            line-height: 1;
-        }
-
-        .step h3 {
-            color: #C4856C;
-            font-size: 1.3em;
-            margin-bottom: 10px;
-            letter-spacing: 1px;
-        }
-
-        .step p {
-            color: #ccc;
-            line-height: 1.7;
-        }
-
-        .why-not-pi {
-            margin: 60px 0;
-            background: #0d0d0d;
-            border: 2px solid #C4856C;
-            padding: 40px;
-        }
-
-        .why-not-pi h2 {
-            margin-bottom: 30px;
-        }
-
-        .pi-comparison p {
-            color: #ccc;
-            margin-bottom: 20px;
-            line-height: 1.7;
-        }
-
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-
-        .comparison-column {
-            background: #111;
-            border-left: 4px solid #C4856C;
-            padding: 25px;
-        }
-
-        .comparison-column h3 {
-            color: #C4856C;
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
-
-        .comparison-column ul {
-            list-style: none;
-        }
-
-        .comparison-column li {
-            color: #aaa;
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .comparison-column li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #C4856C;
-        }
-
-        .pi-highlight {
-            background: #111;
-            border: 1px solid #C4856C;
-            padding: 20px;
-            margin: 25px 0;
-            color: #ccc !important;
-            font-size: 1.05em;
-            line-height: 1.8;
-        }
-
-        .learn-more {
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        .learn-more a {
-            color: #C4856C;
-            text-decoration: none;
-            font-size: 1.1em;
-            font-weight: bold;
-        }
-
-        .learn-more a:hover {
-            text-decoration: underline;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #555;
-            border-top: 1px solid #333;
-            margin-top: 50px;
-        }
-
-        .testimonials {
-            margin: 80px 0 50px;
-        }
-
-        .testimonials h2 {
-            margin-bottom: 40px;
-        }
-
-        .testimonial {
-            background: #111;
-            border: 1px solid #C4856C;
-            padding: 40px;
-            margin: 0 auto;
-            max-width: 900px;
-            box-shadow: 0 0 20px rgba(196, 133, 108, 0.1);
-        }
-
-        .testimonial .quote {
-            color: #ccc;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-size: 1.05em;
-        }
-
-        .testimonial .attribution {
-            color: #C4856C;
-            font-weight: bold;
-            margin-top: 30px;
-            text-align: right;
-            font-size: 1.1em;
-        }
-
-        .testimonial-note {
-            text-align: center;
-            color: #888;
-            margin-top: 20px;
-            font-size: 0.95em;
-            font-style: italic;
-        }
-
-        .referral-program {
-            margin: 60px 0 50px;
-            background: #0d0d0d;
-            border: 1px solid #C4856C;
-            padding: 40px;
-        }
-
-        .referral-program h2 {
-            margin-bottom: 30px;
-        }
-
-        .referral-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .referral-intro {
-            color: #C4856C;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .referral-content p {
-            color: #ccc;
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .referral-examples {
-            background: #111;
-            border-left: 3px solid #C4856C;
-            padding: 20px 30px;
-            margin: 30px 0;
-        }
-
-        .referral-examples h3 {
-            color: #C4856C;
-            font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-
-        .referral-examples ul {
-            list-style: none;
-        }
-
-        .referral-examples li {
-            color: #aaa;
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .referral-examples li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #C4856C;
-        }
-
-        .referral-cta {
-            text-align: center;
-            font-size: 1.1em;
-            margin-top: 30px;
-        }
-
-        .referral-cta a {
-            color: #C4856C;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .referral-cta a:hover {
-            text-decoration: underline;
-        }
-
-        .referral-terms {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-        }
-
-        .referral-terms a {
-            color: #888;
-            text-decoration: none;
-        }
-
-        .referral-terms a:hover {
-            color: #C4856C;
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.8em;
-            }
-            
-            h2 {
-                font-size: 1.5em;
-            }
-            
-            .service {
-                padding: 20px;
-            }
-
-            .step {
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            .step-number {
-                font-size: 2em;
-                margin-bottom: 10px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Courier New', monospace; background: #1a1a1a; color: #C4856C; line-height: 1.6; overflow-x: hidden; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; max-width: 100%; overflow-x: hidden; }
+        @media (min-width: 1020px) { .container { max-width: 1000px; } }
+        /* NAV */
+        nav { background: #111; border-bottom: 1px solid #C4856C; padding: 0 20px; position: sticky; top: 0; z-index: 100; }
+        .nav-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 48px; }
+        .nav-logo { color: #C4856C; text-decoration: none; font-weight: bold; font-size: 1em; letter-spacing: 2px; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { color: #C4856C; text-decoration: none; font-size: 0.85em; opacity: 0.8; }
+        .nav-links a:hover { opacity: 1; text-decoration: underline; }
+        @media (max-width: 600px) { .nav-links { gap: 12px; } .nav-links a { font-size: 0.78em; } }
+        /* END NAV */
+        header { text-align: center; padding: 60px 20px 40px; border-bottom: 2px solid #C4856C; margin-bottom: 40px; position: relative; }
+        header::before { content: ">"; position: absolute; left: 20px; top: 60px; font-size: 24px; animation: blink 1s infinite; }
+        @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+        h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 0 0 15px rgba(196, 133, 108, 0.5); }
+        .tagline { color: #888; font-size: 1.1em; margin-top: 10px; }
+        .intro { background: #111; border: 1px solid #C4856C; padding: 30px; margin-bottom: 50px; box-shadow: 0 0 20px rgba(196, 133, 108, 0.1); }
+        .intro p { margin-bottom: 15px; color: #ccc; }
+        h2 { color: #C4856C; font-size: 2em; margin-bottom: 30px; text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+        h2::before { content: "[ "; }
+        h2::after { content: " ]"; }
+        .service { background: #111; border-left: 4px solid #C4856C; padding: 30px; margin-bottom: 30px; transition: all 0.3s ease; }
+        .service:hover { background: #151515; box-shadow: 0 0 30px rgba(196, 133, 108, 0.2); transform: translateX(5px); }
+        .service h3 { color: #C4856C; font-size: 1.5em; margin-bottom: 10px; }
+        .service .price { color: #888; font-size: 1.2em; margin-bottom: 20px; }
+        .service p { color: #ccc; margin-bottom: 15px; }
+        .service ul { list-style: none; margin: 15px 0; }
+        .service li { color: #aaa; padding-left: 20px; margin-bottom: 8px; position: relative; }
+        .service li::before { content: "▸"; position: absolute; left: 0; color: #C4856C; }
+        .ideal-for { color: #C4856C; font-weight: bold; margin-top: 15px; }
+        .credentials { background: #111; border: 1px solid #C4856C; padding: 30px; margin-top: 50px; }
+        .credentials h2 { margin-bottom: 20px; }
+        .credentials ul { list-style: none; }
+        .credentials li { color: #ccc; padding: 8px 0; padding-left: 20px; position: relative; }
+        .credentials li::before { content: "✓"; position: absolute; left: 0; color: #C4856C; }
+        .contact { text-align: center; background: #111; border: 2px solid #C4856C; padding: 40px; margin-top: 50px; margin-bottom: 30px; }
+        .contact h2 { margin-bottom: 20px; }
+        .contact p { color: #ccc; margin-bottom: 25px; font-size: 1.1em; }
+        .contact a.button { color: #C4856C; text-decoration: none; font-size: 1.3em; border: 2px solid #C4856C; padding: 15px 40px; display: inline-block; transition: all 0.3s ease; }
+        .contact a.button:hover { background: #C4856C; color: #1a1a1a; box-shadow: 0 0 20px rgba(196, 133, 108, 0.3); }
+        .contact .email-display { margin-top: 25px; font-size: 1.1em; color: #C4856C; }
+        .contact .email-display a { color: #C4856C; text-decoration: none; }
+        .contact .email-display a:hover { text-decoration: underline; }
+        .specialization { background: #0d0d0d; border: 1px solid #C4856C; padding: 20px; margin: 30px 0; }
+        .specialization h2 { color: #C4856C; margin-bottom: 15px; font-size: 1.3em; text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+        .specialization h2::before { content: "[ "; }
+        .specialization h2::after { content: " ]"; }
+        .specialization ul { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .specialization li { color: #aaa; padding: 10px; background: #111; border-left: 2px solid #C4856C; padding-left: 15px; }
+        .how-it-works { margin: 60px 0; }
+        .how-it-works h2 { margin-bottom: 40px; }
+        .step { background: #111; border-left: 4px solid #C4856C; padding: 30px; margin-bottom: 25px; display: flex; gap: 25px; align-items: flex-start; transition: all 0.3s ease; }
+        .step:hover { background: #151515; box-shadow: 0 0 30px rgba(196, 133, 108, 0.15); }
+        .step-number { color: #C4856C; font-size: 2.5em; font-weight: bold; min-width: 60px; text-align: center; line-height: 1; }
+        .step h3 { color: #C4856C; font-size: 1.3em; margin-bottom: 10px; letter-spacing: 1px; }
+        .step p { color: #ccc; line-height: 1.7; }
+        .why-not-pi { margin: 60px 0; background: #0d0d0d; border: 2px solid #C4856C; padding: 40px; }
+        .why-not-pi h2 { margin-bottom: 30px; }
+        .pi-comparison p { color: #ccc; margin-bottom: 20px; line-height: 1.7; }
+        .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin: 30px 0; }
+        .comparison-column { background: #111; border-left: 4px solid #C4856C; padding: 25px; }
+        .comparison-column h3 { color: #C4856C; font-size: 1.2em; margin-bottom: 15px; }
+        .comparison-column ul { list-style: none; }
+        .comparison-column li { color: #aaa; padding: 8px 0; padding-left: 20px; position: relative; }
+        .comparison-column li::before { content: "▸"; position: absolute; left: 0; color: #C4856C; }
+        .pi-highlight { background: #111; border: 1px solid #C4856C; padding: 20px; margin: 25px 0; color: #ccc !important; font-size: 1.05em; line-height: 1.8; }
+        .learn-more { text-align: center; margin-top: 25px; }
+        .learn-more a { color: #C4856C; text-decoration: none; font-size: 1.1em; font-weight: bold; }
+        .learn-more a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 30px; color: #555; border-top: 1px solid #333; margin-top: 50px; }
+        .testimonials { margin: 80px 0 50px; }
+        .testimonials h2 { margin-bottom: 40px; }
+        .testimonial { background: #111; border: 1px solid #C4856C; padding: 40px; margin: 0 auto; max-width: 900px; box-shadow: 0 0 20px rgba(196, 133, 108, 0.1); }
+        .testimonial .quote { color: #ccc; line-height: 1.8; margin-bottom: 20px; font-size: 1.05em; }
+        .testimonial .attribution { color: #C4856C; font-weight: bold; margin-top: 30px; text-align: right; font-size: 1.1em; }
+        .testimonial-note { text-align: center; color: #888; margin-top: 20px; font-size: 0.95em; font-style: italic; }
+        .referral-program { margin: 60px 0 50px; background: #0d0d0d; border: 1px solid #C4856C; padding: 40px; }
+        .referral-program h2 { margin-bottom: 30px; }
+        .referral-content { max-width: 800px; margin: 0 auto; }
+        .referral-intro { color: #C4856C; font-size: 1.3em; font-weight: bold; margin-bottom: 20px; text-align: center; }
+        .referral-content p { color: #ccc; margin-bottom: 20px; line-height: 1.6; }
+        .referral-examples { background: #111; border-left: 3px solid #C4856C; padding: 20px 30px; margin: 30px 0; }
+        .referral-examples h3 { color: #C4856C; font-size: 1.1em; margin-bottom: 15px; }
+        .referral-examples ul { list-style: none; }
+        .referral-examples li { color: #aaa; padding: 8px 0; padding-left: 20px; position: relative; }
+        .referral-examples li::before { content: "→"; position: absolute; left: 0; color: #C4856C; }
+        .referral-cta { text-align: center; font-size: 1.1em; margin-top: 30px; }
+        .referral-cta a { color: #C4856C; text-decoration: none; font-weight: bold; }
+        .referral-cta a:hover { text-decoration: underline; }
+        .referral-terms { text-align: center; margin-top: 20px; font-size: 0.9em; }
+        .referral-terms a { color: #888; text-decoration: none; }
+        .referral-terms a:hover { color: #C4856C; text-decoration: underline; }
+        .safety-audit-banner { background: #0d0d0d; border: 1px dashed #C4856C; padding: 18px 24px; margin: 30px 0; text-align: center; }
+        .safety-audit-banner a { color: #C4856C; text-decoration: none; font-size: 1.05em; }
+        .safety-audit-banner a:hover { text-decoration: underline; }
+        @media (max-width: 768px) { h1 { font-size: 1.8em; } h2 { font-size: 1.5em; } .service { padding: 20px; } .step { flex-direction: column; padding: 20px; } .step-number { font-size: 2em; margin-bottom: 10px; } .container { max-width: 100%; overflow-x: hidden; } img, table, .comparison-grid { max-width: 100%; } }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-inner">
+            <a class="nav-logo" href="index.html">APOM RESEARCH</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="digital-evidence.html">Evidence</a></li>
+                <li><a href="referrals.html">Referrals</a></li>
+                <li><a href="https://safety.apomarchives.com" target="_blank">Safety Audit</a></li>
+                <li><a href="https://calendly.com/apom-research/discovery" target="_blank">Schedule</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <header>
             <h1>APOM RESEARCH</h1>
             <p class="tagline">STRATEGIC INTELLIGENCE SERVICES</p>
         </header>
-
         <div class="intro">
             <p><strong>Professional open-source intelligence investigation specializing in complex harassment documentation, coordinated threat analysis, and federal-grade evidence development.</strong></p>
             <p>Led by a cybersecurity professional and M.S. Cybersecurity candidate at Georgetown University. Investigations follow law enforcement-grade documentation protocols and produce evidence packages designed for federal submission and legal proceedings.</p>
             <p>All investigations maintain strict confidentiality and chain of custody standards.</p>
         </div>
-
+        <div class="safety-audit-banner">
+            <a href="https://safety.apomarchives.com" target="_blank">Not sure where to start? Take the free cyberstalking safety audit →</a>
+        </div>
         <div class="specialization">
-            <h3>CORE CAPABILITIES</h3>
+            <h2>Core Capabilities</h2>
             <ul>
-                <li>Harassment & Cyberstalking Documentation</li>
+                <li>Harassment &amp; Cyberstalking Documentation</li>
                 <li>Coordinated Threat Analysis</li>
                 <li>Federal-Grade Evidence Development</li>
-                <li>Social Media Forensics & Analysis</li>
+                <li>Social Media Forensics &amp; Analysis</li>
                 <li>Witness Intimidation Analysis</li>
-                <li>Fraud & Asset Discovery</li>
-                <li>Network Mapping & Entity Analysis</li>
+                <li>Fraud &amp; Asset Discovery</li>
+                <li>Network Mapping &amp; Entity Analysis</li>
                 <li>Expert Witness Support</li>
             </ul>
         </div>
-
         <div class="how-it-works">
             <h2>How It Works</h2>
-            
             <div class="step">
                 <div class="step-number">[1]</div>
-                <h3>CONSULTATION</h3>
-                <p>We discuss your situation confidentially and determine if investigation services are the right fit. No obligation, no judgment—just clarity on your options and what evidence packages can accomplish for your case.</p>
+                <div>
+                    <h3>CONSULTATION</h3>
+                    <p>We discuss your situation confidentially and determine if investigation services are the right fit. No obligation, no judgment—just clarity on your options and what evidence packages can accomplish for your case.</p>
+                </div>
             </div>
-
             <div class="step">
                 <div class="step-number">[2]</div>
-                <h3>INVESTIGATION & DOCUMENTATION</h3>
-                <p>Systematic intelligence gathering across all relevant platforms using federal-grade OSINT methodology. Subject identification, network mapping, timeline construction, and evidence collection following law enforcement chain of custody protocols.</p>
+                <div>
+                    <h3>INVESTIGATION &amp; DOCUMENTATION</h3>
+                    <p>Systematic intelligence gathering across all relevant platforms using federal-grade OSINT methodology. Subject identification, network mapping, timeline construction, and evidence collection following law enforcement chain of custody protocols.</p>
+                </div>
             </div>
-
             <div class="step">
                 <div class="step-number">[3]</div>
-                <h3>ACTIONABLE DELIVERABLE</h3>
-                <p>You receive a comprehensive investigation package structured for your specific goal—FBI referral, local law enforcement submission, legal proceedings, or protective order support. All evidence documented, indexed, and ready for immediate use.</p>
+                <div>
+                    <h3>ACTIONABLE DELIVERABLE</h3>
+                    <p>You receive a comprehensive investigation package structured for your specific goal—FBI referral, local law enforcement submission, legal proceedings, or protective order support. All evidence documented, indexed, and ready for immediate use.</p>
+                </div>
             </div>
         </div>
-
         <div class="why-not-pi">
             <h2>Why Digital Evidence Requires More Than a Private Investigator</h2>
-            
             <div class="pi-comparison">
                 <p>Searching for a PI for your custody case or harassment situation? If your evidence is digital, you need specialized expertise.</p>
-                
                 <div class="comparison-grid">
                     <div class="comparison-column">
                         <h3>Traditional PI</h3>
@@ -621,31 +208,26 @@
                         </ul>
                     </div>
                 </div>
-                
                 <p class="pi-highlight">Most harassment, stalking, and manipulation in custody cases happens online. Screenshots don't cut it in court. You need evidence documented to federal standards — with timestamps, metadata, chain of custody, and authentication that withstands legal scrutiny.</p>
-                
                 <p class="learn-more"><a href="digital-evidence.html">Learn why screenshots aren't enough →</a></p>
             </div>
         </div>
-
-        <h2>Services</h2>
-
+        <h2 id="services">Services</h2>
+        <p style="text-align:center; color:#888; margin-bottom:30px; font-size:0.95em;">Payment plans available on all packages.</p>
         <div class="service">
             <h3>RAPID THREAT ASSESSMENT</h3>
             <p class="price">$1,500 - $3,000</p>
             <p>Comprehensive subject research and threat evaluation delivered in a professional report with full chain of custody documentation. Designed for immediate safety concerns and time-sensitive legal needs.</p>
-            <p class="ideal-for">IDEAL FOR: Individuals experiencing active harassment, attorneys needing rapid background intelligence, restraining order support, initial threat assessment, pre-litigation research</p>
+            <p class="ideal-for">IDEAL FOR: Individuals experiencing active harassment, attorneys and family law attorneys needing rapid background intelligence, restraining order support, initial threat assessment, pre-litigation research</p>
             <p><strong>Turnaround:</strong> 3-5 business days</p>
         </div>
-
         <div class="service">
             <h3>COMPREHENSIVE INVESTIGATION</h3>
             <p class="price">$7,500 - $15,000</p>
             <p>Multi-platform intelligence investigation with pattern analysis, subject network mapping, and strategic recommendations. Deliverables include detailed evidence packages structured for legal proceedings.</p>
-            <p class="ideal-for">IDEAL FOR: High-conflict custody cases, complex divorce proceedings, multi-subject harassment investigations, fraud cases, corporate due diligence, litigation support</p>
+            <p class="ideal-for">IDEAL FOR: High-conflict custody cases, complex divorce proceedings, family law attorneys building digital evidence portfolios, multi-subject harassment investigations, fraud cases, corporate due diligence, litigation support</p>
             <p><strong>Turnaround:</strong> 2-4 weeks</p>
         </div>
-
         <div class="service">
             <h3>LOCAL LAW ENFORCEMENT PACKAGE</h3>
             <p class="price">$8,000 - $12,000</p>
@@ -653,7 +235,6 @@
             <p class="ideal-for">IDEAL FOR: Stalking cases requiring protective orders, domestic violence documentation, local threats requiring immediate police response, state-level cybercrime referrals, cases not meeting federal jurisdiction thresholds</p>
             <p><strong>Turnaround:</strong> 2-3 weeks</p>
         </div>
-
         <div class="service">
             <h3>DUAL-JURISDICTION INVESTIGATION [RECOMMENDED]</h3>
             <p class="price">$35,000 - $50,000</p>
@@ -669,22 +250,19 @@
             <p><strong>Turnaround:</strong> 6-8 weeks</p>
             <p style="margin-top: 15px; color: #C4856C;"><strong>BEST VALUE:</strong> Save $8,000-$12,000 vs. purchasing packages separately</p>
         </div>
-
         <div class="service">
             <h3>STRATEGIC LEGAL PARTNERSHIP</h3>
             <p class="price">$5,000 - $8,000/month</p>
             <p>Ongoing retainer providing continuous intelligence support, real-time monitoring, and evidence development throughout extended legal proceedings. Priority response, monthly briefings, and direct attorney collaboration.</p>
-            <p class="ideal-for">IDEAL FOR: Law firms handling complex litigation, extended custody battles, ongoing harassment situations, corporate security teams, high-net-worth individuals facing persistent threats</p>
+            <p class="ideal-for">IDEAL FOR: Law firms and family law attorneys handling complex litigation, extended custody battles, ongoing harassment situations, corporate security teams, high-net-worth individuals facing persistent threats</p>
         </div>
-
         <div class="service">
-            <h3>EVIDENCE REVIEW & STRATEGY</h3>
+            <h3>EVIDENCE REVIEW &amp; STRATEGY</h3>
             <p class="price">$2,500 - $5,000</p>
             <p>Assessment of existing evidence with gap analysis, collection recommendations, and strategic guidance on strengthening your case for legal proceedings or law enforcement referral.</p>
             <p class="ideal-for">IDEAL FOR: Attorneys preparing for trial, individuals with scattered evidence needing organization, cases stalled due to insufficient documentation, second opinion on investigative strategy</p>
             <p><strong>Turnaround:</strong> 5-7 business days</p>
         </div>
-
         <div class="service">
             <h3>EVIDENCE REORGANIZATION</h3>
             <p class="price">$3,000 - $5,000</p>
@@ -692,7 +270,6 @@
             <p class="ideal-for">IDEAL FOR: Clients with existing investigation packages needing different jurisdictional approach, cases initially pursued at state level now escalating to federal, situations requiring simultaneous submission to multiple agencies</p>
             <p><strong>Turnaround:</strong> 1-2 weeks</p>
         </div>
-
         <div class="service">
             <h3>FEDERAL-GRADE INVESTIGATION</h3>
             <p class="price">$30,000 - $45,000</p>
@@ -701,35 +278,23 @@
             <p><strong>Turnaround:</strong> 4-8 weeks depending on scope</p>
             <p style="margin-top: 15px; color: #888;"><strong>Note:</strong> Can be combined with Local Law Enforcement Package for dual-jurisdiction approach (see Dual-Jurisdiction Investigation above for bundled pricing)</p>
         </div>
-
         <div class="testimonials">
             <h2>Trusted by Advocates and Legal Teams</h2>
-            
             <div class="testimonial">
                 <p class="quote">"Working on the front lines of family court advocacy for more than a decade, I have fought publicly for child safety and spoken out against legislation that harms children. I have stood beside survivors, challenged powerful systems, and pushed for reform wherever it was needed. I never imagined that the very work I poured my heart into would place me at the center of coordinated harassment campaigns that were clearly intended to silence me and discredit my work. These efforts escalated into threats that left me afraid for my life.</p>
-                
                 <p class="quote">Even though documentation is one of my strengths, fear changed everything. The situation became so overwhelming that I struggled to explain the severity of what I was facing. I worried that law enforcement would dismiss me or minimize the danger because the abuse was happening online, across multiple platforms, and through a network that felt impossible to track or describe.</p>
-                
                 <p class="quote">Working with Kyērstin O'Neal changed that. From the first conversation, I felt understood and taken seriously. She validated both my experience and the level of concern. She moved quickly and methodically, identifying the people involved and mapping out the broader network in a way that finally made the full picture clear. She created a comprehensive and factual package that allowed me to approach the FBI and law enforcement with confidence, knowing I would be heard.</p>
-                
                 <p class="quote">Her work gave me something I had lost: hope. Hope that the system would take this seriously. Hope that I was not alone. Hope that there was a way forward that did not rely on me trying to manage this ordeal and trauma by myself.</p>
-                
                 <p class="quote">Calling my gratitude immense would still fall short. Her professionalism, compassion, and unmatched skill set created a path forward when I could not see one, and it allowed me to engage with law enforcement in a grounded and informed way. For anyone facing harassment, stalking, smear campaigns, or online abuse that feels impossible to unravel, I cannot recommend her services strongly enough."</p>
-                
                 <p class="attribution">— Tina Swithin<br>Author and Advocate for Family Court Reform</p>
             </div>
-            
             <p class="testimonial-note">Additional client testimonials available to legal professionals upon request.</p>
         </div>
-
         <div class="referral-program">
             <h2>Referral Program</h2>
-            
             <div class="referral-content">
                 <p class="referral-intro">Refer a client, earn 10% of their first project fee.</p>
-                
-                <p>Know an attorney or advocate who needs federal-grade OSINT investigation? We pay referral bonuses on completed projects.</p>
-                
+                <p>Know an attorney, family law attorney, or advocate who needs federal-grade OSINT investigation? We pay referral bonuses on completed projects.</p>
                 <div class="referral-examples">
                     <h3>Examples:</h3>
                     <ul>
@@ -739,13 +304,10 @@
                         <li>$5,000 assessment → $500 referral bonus</li>
                     </ul>
                 </div>
-                
                 <p class="referral-cta">Email referrals to: <a href="mailto:hello@apomarchives.com?subject=Client%20Referral">hello@apomarchives.com</a></p>
-                
                 <p class="referral-terms"><a href="referrals.html">View Referral Program Terms</a></p>
             </div>
         </div>
-
         <div class="credentials">
             <h2>Credentials</h2>
             <ul>
@@ -759,23 +321,22 @@
                 <li>Exposed organized interstate harassment conspiracy spanning 7 states - 432 evidence items, 35 smoking guns, court orders, criminal records, and photographic proof of in-person coordination. Delivered FBI-ready investigation package documenting federal crimes.</li>
             </ul>
         </div>
-
         <div class="contact">
             <h2>Contact</h2>
             <p>Ready to discuss your case or intelligence needs?</p>
             <p>All consultations are strictly confidential.<br>Initial consultations available to assess case scope and requirements.</p>
             <a class="button" href="mailto:hello@apomarchives.com">hello@apomarchives.com</a>
-            <p style="margin-top: 25px;"><a class="button" href="https://calendly.com/apom-research/discovery" target="_blank">SCHEDULE CONSULTATION</a></p>
+            <p style="margin-top: 25px;"><a class="button" href="https://calendly.com/apom-research/discovery" target="_blank">SCHEDULE FREE CONSULTATION</a></p>
             <p style="margin-top: 20px; font-size: 0.9em; color: #888;">Work product can be structured to support attorney-client privilege where applicable.</p>
         </div>
-
         <footer>
-            <p>&copy; 2024 APOM Research | Strategic Intelligence Services</p>
+            <p>&copy; 2026 APOM Research | Strategic Intelligence Services</p>
             <p style="margin-top: 10px; font-size: 0.9em;">Serving clients globally from secure remote operations</p>
             <p style="margin-top: 15px; font-size: 0.9em;">
-                <a href="https://www.linkedin.com/company/apom-research" target="_blank" style="color: #C4856C; text-decoration: none;">LinkedIn</a> | 
-                <a href="digital-evidence.html" style="color: #C4856C; text-decoration: none;">Why Digital Evidence?</a> | 
-                <a href="referrals.html" style="color: #C4856C; text-decoration: none;">Referral Program</a>
+                <a href="https://www.linkedin.com/company/apom-research" target="_blank" style="color: #C4856C; text-decoration: none;">LinkedIn</a> |
+                <a href="digital-evidence.html" style="color: #C4856C; text-decoration: none;">Why Digital Evidence?</a> |
+                <a href="referrals.html" style="color: #C4856C; text-decoration: none;">Referral Program</a> |
+                <a href="https://safety.apomarchives.com" target="_blank" style="color: #C4856C; text-decoration: none;">Safety Audit</a>
             </p>
         </footer>
     </div>
