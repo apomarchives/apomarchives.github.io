@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="attorney referral program, family law attorney referral, cyberstalking investigator referral, OSINT investigation referral, 10% referral fee" />
     <meta name="description" content="APOM Research Referral Program Terms and Conditions. Refer attorneys, family law attorneys, and advocates — earn 10% of first project fee.">
-    <title>Referral Program Terms | APOM Research</title>
+    <title>Attorney Referral Program | 10% Commission | APOM Research</title>
     <link rel="canonical" href="https://apomarchives.com/referrals.html" />
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a1a1a'/><text y='.9em' font-size='80' x='10'>🔍</text></svg>">
@@ -14,10 +15,12 @@
     <meta property="og:url" content="https://apomarchives.com/referrals.html" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="APOM Research" />
+    <meta property="og:image" content="https://apomarchives.com/og-image.png" />
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Referral Program Terms | APOM Research" />
     <meta name="twitter:description" content="Refer attorneys, family law attorneys, and advocates — earn 10% of the first project fee." />
+    <meta name="twitter:image" content="https://apomarchives.com/og-image.png" />
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-9uoWr5m4sewFQ7TusHV2E.js"></script>
     <script>
@@ -59,13 +62,42 @@
         .back-link { text-align: center; margin: 30px 0; }
         .back-link a { color: #C4856C; text-decoration: none; font-size: 1.1em; }
         .back-link a:hover { text-decoration: underline; }
+    
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-left: auto;
+        }
+        .hamburger span { display: block; width: 100%; height: 2px; background: #C4856C; transition: all 0.3s; }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        @media (max-width: 600px) {
+            .hamburger { display: flex; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #111; padding: 10px 20px; gap: 0; border-top: 1px solid #C4856C; }
+            .nav-links.open { display: flex; }
+            .nav-links li { padding: 10px 0; border-bottom: 1px solid #1a1a1a; }
+            .nav-links li:last-child { border-bottom: none; }
+        }
+    
+        .h1-brand { display: block; }
+        .h1-sub { display: block; font-size: 0.65em; letter-spacing: 0.2em; margin-top: 5px; }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-inner">
             <a class="nav-logo" href="index.html">APOM RESEARCH</a>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="digital-evidence.html">Evidence</a></li>
                 <li><a href="referrals.html">Referrals</a></li>
@@ -76,7 +108,7 @@
     </nav>
     <div class="container">
         <header>
-            <h1>APOM RESEARCH<br>REFERRAL PROGRAM TERMS</h1>
+            <h1><span class="h1-brand">APOM RESEARCH</span><span class="h1-sub">REFERRAL PROGRAM TERMS</span></h1>
         </header>
         <div class="intro">
             <p><strong>Effective Date:</strong> December 2025</p>
@@ -220,9 +252,34 @@
             <a href="index.html">← Back to APOM Research Home</a>
         </div>
         <footer>
-            <p>&copy; 2026 APOM Research | Strategic Intelligence Services</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Referral Program Terms | Last Updated December 2025</p>
-        </footer>
+        <div class="schedule-cta" style="text-align: center; padding: 40px 20px; border-top: 1px solid #C4856C; margin-bottom: 30px;">
+            <p style="font-size: 1.1em; margin-bottom: 20px; color: #C4856C;">Ready to refer a client or ask questions about the program?</p>
+            <a href="https://calendly.com/apom-research/discovery" target="_blank" style="display: inline-block; border: 2px solid #C4856C; color: #C4856C; padding: 12px 30px; text-decoration: none; font-weight: bold; letter-spacing: 0.1em; margin-bottom: 15px;">SCHEDULE A CONSULTATION</a>
+            <p style="margin-top: 15px;">Or email: <a href="mailto:hello@apomarchives.com?subject=Referral Program Inquiry" style="color: #C4856C;">hello@apomarchives.com</a></p>
+        </div>
+        <div style="border-top: 1px solid #333; padding-top: 20px;">
+            <p>© 2026 APOM Research | Strategic Intelligence Services</p>
+            <p>Referral Program Terms | Last Updated December 2025</p>
+            <p style="margin-top: 15px;">
+                <a href="https://www.linkedin.com/company/apom-research" style="color: #C4856C; margin-right: 20px;">LinkedIn</a>
+                <a href="digital-evidence.html" style="color: #C4856C; margin-right: 20px;">Why Digital Evidence?</a>
+                <a href="index.html" style="color: #C4856C; margin-right: 20px;">Home</a>
+                <a href="https://safety.apomarchives.com" style="color: #C4856C;">Safety Audit</a>
+            </p>
+        </div>
+    </footer>
     </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navLinks = document.getElementById('nav-links');
+        if (hamburgerBtn && navLinks) {
+            hamburgerBtn.addEventListener('click', function() {
+                const isOpen = navLinks.classList.toggle('open');
+                hamburgerBtn.classList.toggle('active', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            });
+        }
+    </script>
 </body>
 </html>
