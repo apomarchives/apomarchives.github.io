@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional OSINT investigations specializing in harassment documentation, digital evidence collection, and legal support. Cybersecurity-backed intelligence research.">
-    <meta name="keywords" content="OSINT investigator, harassment documentation, digital evidence, background check, cyberstalking investigation, divorce investigation, digital forensics">
-    <title>APOM Research | Strategic Intelligence Services</title>
+    <meta name="description" content="Cyberstalking investigator specializing in federal-grade evidence packages for family law attorneys, FBI referrals, and custody cases. Free consultation.">
+    <meta name="keywords" content="cyberstalking investigator, harassment documentation, digital evidence, family law attorney, FBI referral, federal evidence package, cyberstalking investigation, digital forensics">
+    <title>Cyberstalking Investigator | Federal-Grade Evidence for Family Law | APOM Research</title>
     <link rel="canonical" href="https://apomarchives.com/" />
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a1a1a'/><text y='.9em' font-size='80' x='10'>🔍</text></svg>">
     <!-- Open Graph -->
-    <meta property="og:title" content="APOM Research | Strategic Intelligence Services" />
+    <meta property="og:title" content="Cyberstalking Investigator | Federal-Grade Evidence for Family Law | APOM Research" />
     <meta property="og:description" content="Professional OSINT investigations specializing in harassment documentation, digital evidence collection, and legal support." />
     <meta property="og:url" content="https://apomarchives.com/" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="APOM Research" />
+    <meta property="og:image" content="https://apomarchives.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="APOM Research | Strategic Intelligence Services" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cyberstalking Investigator | Federal-Grade Evidence for Family Law | APOM Research" />
     <meta name="twitter:description" content="Professional OSINT investigations specializing in harassment documentation, digital evidence collection, and legal support." />
+    <meta name="twitter:image" content="https://apomarchives.com/og-image.png" />
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-9uoWr5m4sewFQ7TusHV2E.js"></script>
     <script>
@@ -123,14 +127,80 @@
         .safety-audit-banner { background: #0d0d0d; border: 1px dashed #C4856C; padding: 18px 24px; margin: 30px 0; text-align: center; }
         .safety-audit-banner a { color: #C4856C; text-decoration: none; font-size: 1.05em; }
         .safety-audit-banner a:hover { text-decoration: underline; }
+        
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            margin-left: auto;
+        }
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #C4856C;
+            transition: all 0.3s;
+        }
+        .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        @media (max-width: 600px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #111;
+                padding: 10px 20px;
+                gap: 0;
+                border-top: 1px solid #C4856C;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li { padding: 10px 0; border-bottom: 1px solid #1a1a1a; }
+            .nav-links li:last-child { border-bottom: none; }
+        }
+
         @media (max-width: 768px) { h1 { font-size: 1.8em; } h2 { font-size: 1.5em; } .service { padding: 20px; } .step { flex-direction: column; padding: 20px; } .step-number { font-size: 2em; margin-bottom: 10px; } .container { max-width: 100%; overflow-x: hidden; } img, table, .comparison-grid { max-width: 100%; } }
     </style>
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "APOM Research",
+      "description": "Federal-grade cyberstalking investigator specializing in evidence packages for family law attorneys, FBI referrals, and custody cases.",
+      "url": "https://apomarchives.com",
+      "email": "hello@apomarchives.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Kyērstin O'Neal",
+        "jobTitle": "Cybersecurity Professional & Investigator"
+      },
+      "serviceType": "Cyberstalking Investigation, Digital Forensics, OSINT Investigation",
+      "areaServed": "Worldwide",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Investigation Services"
+      }
+    }
+    <\/script>
 </head>
 <body>
     <nav>
         <div class="nav-inner">
             <a class="nav-logo" href="index.html">APOM RESEARCH</a>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+        <ul class="nav-links" id="nav-links">
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="digital-evidence.html">Evidence</a></li>
                 <li><a href="referrals.html">Referrals</a></li>
@@ -141,12 +211,12 @@
     </nav>
     <div class="container">
         <header>
-            <h1>APOM RESEARCH</h1>
+            <h1>Cyberstalking Investigator<br><span style="font-size: 0.7em; letter-spacing: 0.15em;">FEDERAL-GRADE EVIDENCE FOR FAMILY LAW</span></h1>
             <p class="tagline">STRATEGIC INTELLIGENCE SERVICES</p>
         </header>
         <div class="intro">
             <p><strong>Professional open-source intelligence investigation specializing in complex harassment documentation, coordinated threat analysis, and federal-grade evidence development.</strong></p>
-            <p>Led by a cybersecurity professional and M.S. Cybersecurity candidate at Georgetown University. Investigations follow law enforcement-grade documentation protocols and produce evidence packages designed for federal submission and legal proceedings.</p>
+            <p>Led by Kyērstin O'Neal, a cybersecurity professional and M.S. Cybersecurity candidate at Georgetown University. Investigations follow law enforcement-grade documentation protocols and produce evidence packages designed for federal submission and legal proceedings.</p>
             <p>All investigations maintain strict confidentiality and chain of custody standards.</p>
         </div>
         <div class="safety-audit-banner">
@@ -166,15 +236,14 @@
             </ul>
         </div>
         <div class="how-it-works">
-            <h2>How It Works</h2>
+            <h2>How It Works</h2
             <div class="step">
                 <div class="step-number">[1]</div>
                 <div>
                     <h3>CONSULTATION</h3>
                     <p>We discuss your situation confidentially and determine if investigation services are the right fit. No obligation, no judgment—just clarity on your options and what evidence packages can accomplish for your case.</p>
                 </div>
-            </div>
-            <div class="step">
+            </div            <div class="step">
                 <div class="step-number">[2]</div>
                 <div>
                     <h3>INVESTIGATION &amp; DOCUMENTATION</h3>
@@ -225,21 +294,27 @@
             <p>Comprehensive subject research and threat evaluation delivered in a professional report with full chain of custody documentation. Designed for immediate safety concerns and time-sensitive legal needs.</p>
             <p class="ideal-for">IDEAL FOR: Individuals experiencing active harassment, attorneys and family law attorneys needing rapid background intelligence, restraining order support, initial threat assessment, pre-litigation research</p>
             <p><strong>Turnaround:</strong> 3-5 business days</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>COMPREHENSIVE INVESTIGATION</h3>
             <p class="price">$7,500 - $15,000</p>
             <p>Multi-platform intelligence investigation with pattern analysis, subject network mapping, and strategic recommendations. Deliverables include detailed evidence packages structured for legal proceedings.</p>
             <p class="ideal-for">IDEAL FOR: High-conflict custody cases, complex divorce proceedings, family law attorneys building digital evidence portfolios, multi-subject harassment investigations, fraud cases, corporate due diligence, litigation support</p>
             <p><strong>Turnaround:</strong> 2-4 weeks</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>LOCAL LAW ENFORCEMENT PACKAGE</h3>
             <p class="price">$8,000 - $12,000</p>
             <p>State and local law enforcement referral package with evidence documentation structured for county sheriff, state police, or district attorney review. Focuses on jurisdiction-specific evidence and actionable crimes for local prosecution.</p>
             <p class="ideal-for">IDEAL FOR: Stalking cases requiring protective orders, domestic violence documentation, local threats requiring immediate police response, state-level cybercrime referrals, cases not meeting federal jurisdiction thresholds</p>
             <p><strong>Turnaround:</strong> 2-3 weeks</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>DUAL-JURISDICTION INVESTIGATION [RECOMMENDED]</h3>
             <p class="price">$35,000 - $50,000</p>
@@ -254,27 +329,35 @@
             <p class="ideal-for">IDEAL FOR: Interstate harassment campaigns, coordinated stalking across state lines, cases requiring both immediate local action and federal investigation, high-stakes situations demanding comprehensive multi-level law enforcement response</p>
             <p><strong>Turnaround:</strong> 6-8 weeks</p>
             <p style="margin-top: 15px; color: #C4856C;"><strong>BEST VALUE:</strong> Save $8,000-$12,000 vs. purchasing packages separately</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>STRATEGIC LEGAL PARTNERSHIP</h3>
             <p class="price">$5,000 - $8,000/month</p>
             <p>Ongoing retainer providing continuous intelligence support, real-time monitoring, and evidence development throughout extended legal proceedings. Priority response, monthly briefings, and direct attorney collaboration.</p>
             <p class="ideal-for">IDEAL FOR: Law firms and family law attorneys handling complex litigation, extended custody battles, ongoing harassment situations, corporate security teams, high-net-worth individuals facing persistent threats</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>EVIDENCE REVIEW &amp; STRATEGY</h3>
             <p class="price">$2,500 - $5,000</p>
             <p>Assessment of existing evidence with gap analysis, collection recommendations, and strategic guidance on strengthening your case for legal proceedings or law enforcement referral.</p>
             <p class="ideal-for">IDEAL FOR: Attorneys preparing for trial, individuals with scattered evidence needing organization, cases stalled due to insufficient documentation, second opinion on investigative strategy</p>
             <p><strong>Turnaround:</strong> 5-7 business days</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>EVIDENCE REORGANIZATION</h3>
             <p class="price">$3,000 - $5,000</p>
             <p>Transform existing federal investigation packages for state/local jurisdiction submission, or adapt local packages for federal review. Includes reorganized evidence index, jurisdiction-specific timeline, and updated statute analysis. Fast turnaround for clients needing multi-agency submission.</p>
             <p class="ideal-for">IDEAL FOR: Clients with existing investigation packages needing different jurisdictional approach, cases initially pursued at state level now escalating to federal, situations requiring simultaneous submission to multiple agencies</p>
             <p><strong>Turnaround:</strong> 1-2 weeks</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="service">
             <h3>FEDERAL-GRADE INVESTIGATION</h3>
             <p class="price">$30,000 - $45,000</p>
@@ -282,7 +365,9 @@
             <p class="ideal-for">IDEAL FOR: Coordinated harassment campaigns, organized stalking, witness intimidation cases, complex fraud with multiple actors, cases requiring federal agency referral, interstate criminal enterprises</p>
             <p><strong>Turnaround:</strong> 4-8 weeks depending on scope</p>
             <p style="margin-top: 15px; color: #888;"><strong>Note:</strong> Can be combined with Local Law Enforcement Package for dual-jurisdiction approach (see Dual-Jurisdiction Investigation above for bundled pricing)</p>
-        </div>
+        
+            <p class="service-cta"><a href="https://calendly.com/apom-research/discovery" target="_blank" style="color: #C4856C; text-decoration: none; font-weight: bold;">Schedule Consultation →</a></p>
+</div>
         <div class="testimonials">
             <h2>Trusted by Advocates and Legal Teams</h2>
             <div class="testimonial">
@@ -310,12 +395,16 @@
                     </ul>
                 </div>
                 <p class="referral-cta">Email referrals to: <a href="mailto:hello@apomarchives.com?subject=Client%20Referral">hello@apomarchives.com</a></p>
-                <p class="referral-terms"><a href="referrals.html">View Referral Program Terms</a></p>
+                <p class="referral-terms"><a href="referrals.html" style="color: #C4856C;">View Referral Program Terms</a></p>
             </div>
         </div>
         <div class="credentials">
             <h2>Credentials</h2>
-            <ul>
+            <div class="fbi-callout" style="border: 1px solid #C4856C; padding: 15px 20px; margin-bottom: 20px; border-left: 4px solid #C4856C;">
+                    <strong style="color: #C4856C; display: block; margin-bottom: 8px;">CASE OUTCOME</strong>
+                    <p style="margin: 0;">Exposed organized interstate harassment conspiracy spanning 7 states — 432 evidence items, 35 smoking guns, FBI-ready package delivered.</p>
+                </div>
+                <ul>
                 <li>M.S. Cybersecurity Candidate, Georgetown University</li>
                 <li>CompTIA CySA+ (CSAS)</li>
                 <li>CompTIA Security+ (CIOS, CSIS)</li>
@@ -346,5 +435,17 @@
             </p>
         </footer>
     </div>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navLinks = document.getElementById('nav-links');
+        if (hamburgerBtn && navLinks) {
+            hamburgerBtn.addEventListener('click', function() {
+                const isOpen = navLinks.classList.toggle('open');
+                hamburgerBtn.classList.toggle('active', isOpen);
+                hamburgerBtn.setAttribute('aria-expanded', isOpen);
+            });
+        }
+    </script>
 </body>
 </html>
