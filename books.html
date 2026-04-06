@@ -14,7 +14,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="APOM Research" />
   <meta property="og:image" content="https://apomarchives.com/og-image.png" />
-  <!-- Twitter Card -->
+  <!-- Twitter Card --
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Make the Invisible Visible | APOM Research" />
   <meta name="twitter:description" content="A Family Law Attorney's Field Guide to Digital Evidence and Technology-Facilitated Abuse." />
@@ -190,11 +190,18 @@
       gap: 35px;
       align-items: start;
     }
+    .author-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
     .author-photo img {
       width: 100%;
-      max-width: 160px;
+      height: 100%;
       display: block;
-      box-shadow: 0 0 20px rgba(196, 133, 108, 0.2);
+      object-fit: cover;
     }
     .author-bio h3 {
       color: #C4856C;
@@ -261,7 +268,7 @@
       .hero-cover img { max-width: 220px; margin: 0 auto; }
       .hero-title { font-size: 1.5em; }
       .author-section { grid-template-columns: 1fr; }
-      .author-photo img { max-width: 120px; }
+      .author-photo { width: 120px; height: 120px; } .author-photo img { width: 100%; height: 100%; }
       .hamburger { display: flex; }
       .nav-links {
         display: none;
