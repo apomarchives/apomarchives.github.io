@@ -1,2 +1,398 @@
-Footer still says "Strategic Intelligence Services" -- should be "Digital Forensics for Family Law" same as the products page change Frank just made.
-"For more resources, visit apomarchives.com" in the middle of the description paragraph -- remove it. It breaks the flow and sends people away from the page before they've finished reading. The navigation and footer handle that.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Make the Invisible Visible: A Family Law Attorney's Field Guide to Digital Evidence and Technology-Facilitated Abuse — by Kyerstin O'Neal. Available in ebook and paperback." />
+  <title>Make the Invisible Visible | APOM Research</title>
+  <link rel="canonical" href="https://apomarchives.com/books" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Make the Invisible Visible | APOM Research" />
+  <meta property="og:description" content="A Family Law Attorney's Field Guide to Digital Evidence and Technology-Facilitated Abuse. By Kyerstin O'Neal." />
+  <meta property="og:url" content="https://apomarchives.com/books" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="APOM Research" />
+  <meta property="og:image" content="https://apomarchives.com/og-image.png" />
+  <!-- Twitter Card --
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Make the Invisible Visible | APOM Research" />
+  <meta name="twitter:description" content="A Family Law Attorney's Field Guide to Digital Evidence and Technology-Facilitated Abuse." />
+  <meta name="twitter:image" content="https://apomarchives.com/og-image.png" />
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-9uoWr5m4sewFQ7TusHV2E.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Courier New', monospace;
+      background: #1a1a1a;
+      color: #C4856C;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 20px; overflow-x: hidden; }
+
+    /* NAV */
+    nav {
+      background: #111;
+      border-bottom: 1px solid #C4856C;
+      padding: 0 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 48px;
+    }
+    .nav-logo { color: #C4856C; text-decoration: none; font-weight: bold; font-size: 1em; letter-spacing: 2px; }
+    .nav-links { display: flex; gap: 20px; list-style: none; }
+    .nav-links a { color: #C4856C; text-decoration: none; font-size: 0.85em; opacity: 0.8; }
+    .nav-links a:hover { opacity: 1; text-decoration: underline; }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 50px;
+      align-items: start;
+      padding: 60px 0 50px;
+      border-bottom: 2px solid #C4856C;
+      margin-bottom: 50px;
+    }
+    .hero-cover img {
+      width: 100%;
+      max-width: 280px;
+      display: block;
+      box-shadow: 0 0 40px rgba(196, 133, 108, 0.3);
+    }
+    .hero-info { display: flex; flex-direction: column; justify-content: center; }
+    .hero-eyebrow {
+      font-size: 0.75em;
+      letter-spacing: 3px;
+      color: #888;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-size: 2em;
+      line-height: 1.2;
+      margin-bottom: 8px;
+      text-shadow: 0 0 15px rgba(196, 133, 108, 0.4);
+    }
+    .hero-subtitle {
+      font-size: 1em;
+      color: #aaa;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+    .btn-group { display: flex; gap: 15px; flex-wrap: wrap; }
+    .cta-btn {
+      display: inline-block;
+      background: #C4856C;
+      color: #1a1a1a;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      font-size: 0.9em;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .cta-btn.secondary {
+      background: transparent;
+      color: #C4856C;
+      border: 2px solid #C4856C;
+    }
+    .cta-btn.secondary:hover { background: #C4856C; color: #1a1a1a; }
+
+    /* DESCRIPTION */
+    .book-description {
+      background: #111;
+      border-left: 4px solid #C4856C;
+      padding: 40px;
+      margin-bottom: 40px;
+    }
+    .book-description p {
+      color: #ccc;
+      font-size: 1.05em;
+      line-height: 1.8;
+    }
+
+    /* PULL QUOTE */
+    .pull-quote {
+      background: #0d0d0d;
+      border-left: 4px solid #C4856C;
+      padding: 35px 40px;
+      margin-bottom: 40px;
+    }
+    .pull-quote blockquote {
+      color: #C4856C;
+      font-size: 1.1em;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 16px;
+    }
+    .pull-quote cite {
+      display: block;
+      color: #888;
+      font-size: 0.9em;
+      font-style: normal;
+      letter-spacing: 0.5px;
+    }
+
+    /* INSIDE THIS BOOK */
+    .inside-book { margin-bottom: 40px; }
+    .inside-book h2 {
+      color: #C4856C;
+      font-size: 1.4em;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+    .inside-book h2::before { content: "[ "; }
+    .inside-book h2::after { content: " ]"; }
+    .inside-book ul { list-style: none; }
+    .inside-book li {
+      background: #111;
+      border-left: 4px solid #C4856C;
+      padding: 20px 25px;
+      margin-bottom: 12px;
+      color: #ccc;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 45px;
+    }
+    .inside-book li::before {
+      content: "\25B8";
+      position: absolute;
+      left: 18px;
+      color: #C4856C;
+    }
+
+    /* AUTHOR */
+    .author-section {
+      background: #111;
+      border-left: 4px solid #C4856C;
+      padding: 40px;
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 35px;
+      align-items: start;
+    }
+    .author-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .author-photo img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .author-bio h3 {
+      color: #C4856C;
+      font-size: 1.1em;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .author-bio p { color: #aaa; line-height: 1.7; }
+
+    /* TOOLKIT CTA */
+    .toolkit-cta {
+      text-align: center;
+      background: #111;
+      border: 1px solid #333;
+      padding: 35px;
+      margin-top: 10px;
+    }
+    .toolkit-cta p { color: #888; margin-bottom: 18px; font-size: 0.95em; }
+    .toolkit-cta a {
+      color: #C4856C;
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid #C4856C;
+      padding: 12px 30px;
+      display: inline-block;
+      font-size: 0.9em;
+      letter-spacing: 0.1em;
+      transition: all 0.2s;
+    }
+    .toolkit-cta a:hover { background: #C4856C; color: #1a1a1a; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      border-top: 1px solid #333;
+      margin-top: 50px;
+    }
+    footer a { color: #C4856C; text-decoration: none; margin: 0 8px; }
+    footer a:hover { text-decoration: underline; }
+
+    /* HAMBURGER */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 18px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      margin-left: auto;
+    }
+    .hamburger span { display: block; width: 100%; height: 2px; background: #C4856C; transition: all 0.3s; }
+    .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; gap: 30px; padding: 40px 0 40px; }
+      .hero-cover img { max-width: 220px; margin: 0 auto; }
+      .hero-title { font-size: 1.5em; }
+      .author-section { grid-template-columns: 1fr; }
+      .author-photo { width: 120px; height: 120px; } .author-photo img { width: 100%; height: 100%; }
+      .hamburger { display: flex; }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #111;
+        padding: 10px 20px;
+        gap: 0;
+        border-top: 1px solid #C4856C;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { padding: 10px 0; border-bottom: 1px solid #1a1a1a; }
+      .nav-links li:last-child { border-bottom: none; }
+      .book-description, .pull-quote, .inside-book li, .author-section, .toolkit-cta { padding-left: 20px; padding-right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="index.html">APOM RESEARCH</a>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="digital-evidence.html">Evidence</a></li>
+      <li><a href="referrals.html">Referrals</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="books.html">Book</a></li>
+      <li><a href="https://safety.apomarchives.com" target="_blank">Safety Audit</a></li>
+      <li><a href="https://calendly.com/apom-research/discovery" target="_blank">Schedule</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <!-- HERO: Cover + Title + Buy Buttons -->
+  <section class="hero">
+    <div class="hero-cover">
+      <img src="book-cover.jpg" alt="Make the Invisible Visible book cover" />
+    </div>
+    <div class="hero-info">
+      <p class="hero-eyebrow">New Release &mdash; Available Now</p>
+      <h1 class="hero-title">Make the Invisible Visible</h1>
+      <p class="hero-subtitle">A Family Law Attorney&rsquo;s Field Guide to Digital Evidence and Technology-Facilitated Abuse</p>
+      <div class="btn-group">
+        <a href="https://a.co/d/034j3BQj" target="_blank" class="cta-btn">Get the Ebook &mdash; $9.99</a>
+        <a href="https://a.co/d/034j3BQj" target="_blank" class="cta-btn secondary">Get the Paperback &mdash; $29.99</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <div class="book-description">
+    <p>Your client isn&rsquo;t paranoid. She&rsquo;s being surveilled. The strange device behavior. The impossible knowledge. The ex who always seems to know exactly where she is and what she&rsquo;s planning. These are not anxiety symptoms. They are textbook indicators of technology-facilitated abuse &mdash; and if no one in the room knows how to recognize them, the evidence disappears before you ever get to court. <em>Make the Invisible Visible</em> is the field guide family law attorneys have needed for years. Written by a CISA- and Sandia-trained cyberstalking and digital forensics investigator now exclusively focused on family law, this book gives you the framework to identify, preserve, authenticate, and present digital evidence at the level courts actually require. Not screenshots in a folder. Evidence that survives an authentication challenge, holds up under opposing counsel&rsquo;s scrutiny, and reflects what is actually happening to your client.</p>
+  </div>
+
+  <!-- TINA'S PULL QUOTE -->
+  <div class="pull-quote">
+    <blockquote>
+      &ldquo;Her professionalism and her precision gave me something I had almost stopped believing I could have: a path forward.&rdquo;
+    </blockquote>
+    <cite>&mdash; Tina Swithin, Founder, One Mom&rsquo;s Battle</cite>
+  </div>
+
+  <!-- INSIDE THIS BOOK -->
+  <div class="inside-book">
+    <h2>Inside This Book</h2>
+    <ul>
+      <li><strong>The Four Vectors</strong> &mdash; the four patterns of technology-facilitated abuse your clients are describing that sound impossible until you understand the technology behind them: device compromise, coordinated campaigns, financial surveillance, and weaponizing children&rsquo;s access.</li>
+      <li><strong>Why digital evidence fails in court</strong> &mdash; the methodology errors that get evidence thrown out, fabricated evidence admitted, and cases decided on records no one verified.</li>
+      <li><strong>The subpoena strategy that trips up even experienced attorneys</strong> &mdash; the procedural errors, wrong domestication states, and missing attestations that close evidence windows permanently.</li>
+      <li><strong>The First Five Actions</strong> &mdash; what to do before your client leaves the first meeting, every time, in every case with a digital component.</li>
+    </ul>
+  </div>
+
+  <!-- AUTHOR -->
+  <div class="author-section">
+    <div class="author-photo">
+      <img src="author-photo.jpg" alt="Kyerstin O'Neal, author" />
+    </div>
+    <div class="author-bio">
+      <h3>About the Author</h3>
+      <p>Ky&emacr;rstin O&rsquo;Neal is a CISA- and Sandia-trained cyberstalking and digital forensics investigator exclusively focused on family law. She is the founder of APOM Research and develops federal-grade evidence packages for family law attorneys, FBI referrals, and custody cases.</p>
+    </div>
+  </div>
+
+  <!-- TOOLKIT CTA -->
+  <div class="toolkit-cta">
+    <p>Need attorney-ready tools to go with the book?</p>
+    <a href="https://apomarchives.com/attorneys">VIEW THE ATTORNEY TOOLKIT &rarr;</a>
+  </div>
+
+</div><!-- /container -->
+
+<footer>
+  <p>&copy; 2026 APOM Research | Digital Forensics for Family Law</p>
+  <p style="margin-top: 10px; font-size: 0.9em;">
+    <a href="index.html">Home</a> |
+    <a href="services.html">All Services</a> |
+    <a href="digital-evidence.html">Why Digital Evidence?</a> |
+    <a href="products.html">Products</a> |
+    <a href="books.html">Book</a> |
+    <a href="https://safety.apomarchives.com" target="_blank">Safety Audit</a> |
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+<script>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const navLinks = document.getElementById('nav-links');
+  if (hamburgerBtn && navLinks) {
+    hamburgerBtn.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active', isOpen);
+      hamburgerBtn.setAttribute('aria-expanded', isOpen);
+    });
+  }
+</script>
+</body>
+</html>
