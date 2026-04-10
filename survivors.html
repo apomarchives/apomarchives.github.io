@@ -322,7 +322,96 @@
                 font-size: 1.4em;
             }
         }
-    </style>
+    
+        /* Survivor Resources Section */
+        .survivor-resources-section {
+            background: #FDF6F0;
+            border-left: 4px solid #C4856C;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .survivor-intro {
+            color: #1A1A1A;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+
+        .survivor-resource-card {
+            background: #fff;
+            border: 1px solid #C4856C;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .survivor-bundle-card {
+            background: #FDF6F0;
+            border: 2px solid #C4856C;
+        }
+
+        .survivor-resource-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .survivor-resource-title {
+            color: #1A1A1A;
+            font-size: 1.1em;
+            font-weight: bold;
+            flex: 1;
+            line-height: 1.4;
+        }
+
+        .survivor-resource-price {
+            color: #C4856C;
+            font-size: 1.15em;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .survivor-savings {
+            font-size: 0.85em;
+            font-weight: normal;
+            color: #1A1A1A;
+        }
+
+        .survivor-resource-desc {
+            color: #1A1A1A;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 1em;
+        }
+
+        .survivor-resource-format {
+            color: #555;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .survivor-cta-btn {
+            display: inline-block;
+            color: #C4856C;
+            text-decoration: none;
+            border: 2px solid #C4856C;
+            padding: 10px 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 5px;
+            background: transparent;
+        }
+
+        .survivor-cta-btn:hover {
+            background: #C4856C;
+            color: #FDF6F0;
+        }
+
+        </style>
 </head>
 <body>
     <div class="container">
@@ -358,7 +447,67 @@
             </ul>
         </div>
 
-        <h2>Why This Matters</h2>
+    
+        <h2>START HERE -- Free &amp; Self-Help Resources</h2>
+
+        <div class="survivor-resources-section">
+            <p class="survivor-intro">You don't need to hire an investigator to take your first step. These guides were written so you can start today.</p>
+
+            <!-- Digital Safety Audit -->
+            <div class="survivor-resource-card">
+                <div class="survivor-resource-header">
+                    <span class="survivor-resource-title">Digital Safety Audit</span>
+                    <span class="survivor-resource-price">Free</span>
+                </div>
+                <p class="survivor-resource-desc">A private, step-by-step audit that checks whether your accounts, devices, and finances have been compromised. Nothing you enter is stored anywhere. Takes 15&ndash;20 minutes.</p>
+                <a href="https://safety.apomarchives.com" class="survivor-cta-btn" target="_blank">LAUNCH THE AUDIT &rarr;</a>
+            </div>
+
+            <!-- Guide 1 -->
+            <div class="survivor-resource-card">
+                <div class="survivor-resource-header">
+                    <span class="survivor-resource-title">How to Download Your Own Digital Evidence</span>
+                    <span class="survivor-resource-price">$37</span>
+                </div>
+                <p class="survivor-resource-desc">Every major platform keeps records of who accessed your accounts, from which device, from which location, and when. You are legally entitled to that data. This guide shows you how to get it &mdash; no attorney, no subpoena, no technical background required.</p>
+                <p class="survivor-resource-format">PDF. Instant download.</p>
+                <a href="#" class="survivor-cta-btn">GET THE GUIDE &rarr;</a>
+            </div>
+
+            <!-- Guide 2 -->
+            <div class="survivor-resource-card">
+                <div class="survivor-resource-header">
+                    <span class="survivor-resource-title">Technology-Facilitated Abuse: The Laws That Apply to You</span>
+                    <span class="survivor-resource-price">$47</span>
+                </div>
+                <p class="survivor-resource-desc">Family court is not your only option. Installing surveillance software without consent, accessing your accounts without authorization, using digital tools to stalk you across state lines &mdash; in many cases these are federal crimes. This guide names the laws and tells you where to take what you know.</p>
+                <p class="survivor-resource-format">PDF. Instant download.</p>
+                <a href="#" class="survivor-cta-btn">GET THE GUIDE &rarr;</a>
+            </div>
+
+            <!-- Guide 3 -->
+            <div class="survivor-resource-card">
+                <div class="survivor-resource-header">
+                    <span class="survivor-resource-title">He Can't Find What He Can't See: A Survivor's Step-by-Step Guide to Digital Privacy and Disappearance</span>
+                    <span class="survivor-resource-price">$57</span>
+                </div>
+                <p class="survivor-resource-desc">Your threat is a person who knows your name, your patterns, and has already demonstrated he will use technology to find you. This guide closes every digital door he could use &mdash; data brokers, your phone, your accounts, your home network, your vehicle, and more. Every section includes a checklist.</p>
+                <p class="survivor-resource-format">PDF. Instant download.</p>
+                <a href="#" class="survivor-cta-btn">GET THE GUIDE &rarr;</a>
+            </div>
+
+            <!-- Bundle -->
+            <div class="survivor-resource-card survivor-bundle-card">
+                <div class="survivor-resource-header">
+                    <span class="survivor-resource-title">The Complete Survivor Privacy &amp; Evidence Bundle</span>
+                    <span class="survivor-resource-price">$97 <span class="survivor-savings">(saves $24)</span></span>
+                </div>
+                <p class="survivor-resource-desc">Evidence. Law. Disappearance. All three guides in one place.</p>
+                <a href="#" class="survivor-cta-btn">GET THE BUNDLE &rarr;</a>
+            </div>
+        </div>
+
+    <h2>Why This Matters</h2>
 
         <div class="why-matters">
             <p><strong>Screenshots alone aren't enough.</strong></p>
@@ -416,7 +565,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 APOM Research | Strategic Intelligence Services</p>
+            <p>&copy; 2026 APOM Research | Digital Forensics for Family Law</p>
             <p style="margin-top: 10px; font-size: 0.9em;">
                 <a href="https://www.linkedin.com/company/apom-research" target="_blank">LinkedIn</a> | 
             <a href="index.html">Home</a> | 
