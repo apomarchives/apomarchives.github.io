@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strategic Legal Partnership — Apply | APOM Research</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: #0d0d0d;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      min-height: 56px;
+    }
+    nav a.brand {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+    nav ul li a {
+      color: #cccccc;
+      text-decoration: none;
+      font-size: 0.78rem;
+      padding: 0.35rem 0.6rem;
+      border-radius: 3px;
+      transition: color 0.2s;
+    }
+    nav ul li a:hover { color: #ffffff; }
+
+    /* ── HERO ── */
+    .hero {
+      background: #0d0d0d;
+      color: #ffffff;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+    .hero .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c8964a;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: #bbbbbb;
+      max-width: 620px;
+      margin: 0 auto 1.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #1e1e1e;
+      border: 1px solid #333;
+      color: #c8964a;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+    }
+
+    /* ── MAIN ── */
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* ── WHAT IS IT ── */
+    .section-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #c8964a;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #0d0d0d;
+    }
+    p { margin-bottom: 1rem; color: #333; }
+
+    /* ── CALLOUT BLOCK ── */
+    .callout {
+      background: #f8f4ef;
+      border-left: 4px solid #c8964a;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+    .callout p {
+      margin: 0;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: #1a1a1a;
+    }
+
+    /* ── THREE COLUMNS ── */
+    .intake-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .intake-card {
+      background: #0d0d0d;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 1.5rem;
+    }
+    .intake-card .step {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #c8964a;
+      margin-bottom: 0.4rem;
+    }
+    .intake-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .intake-card p {
+      font-size: 0.85rem;
+      color: #aaaaaa;
+      margin: 0;
+    }
+
+    /* ── TIER TABLE ── */
+    .tier-section { margin: 3rem 0; }
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .tier-table th {
+      background: #0d0d0d;
+      color: #ffffff;
+      padding: 0.75rem 1rem;
+      text-align: left;
+    }
+    .tier-table th.tier-name { color: #c8964a; }
+    .tier-table td {
+      padding: 0.65rem 1rem;
+      border-bottom: 1px solid #eeeeee;
+      color: #333;
+    }
+    .tier-table tr:last-child td { border-bottom: none; }
+    .tier-table td:first-child { font-weight: 500; color: #1a1a1a; }
+    .check { color: #2e7d32; font-weight: 700; }
+    .dash { color: #bbbbbb; }
+    .tier-note {
+      font-size: 0.78rem;
+      color: #888;
+      margin-top: 0.5rem;
+    }
+
+    /* ── WHO IS THIS FOR ── */
+    .for-list {
+      list-style: none;
+      margin: 1rem 0 1.5rem;
+    }
+    .for-list li {
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      position: relative;
+      color: #333;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .for-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #c8964a;
+      font-weight: 700;
+    }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      background: #f9f9f9;
+      border: 1px solid #e8e8e8;
+      border-radius: 10px;
+      padding: 2.5rem 2rem;
+      margin-top: 3rem;
+    }
+    .form-section h2 { margin-bottom: 0.5rem; }
+    .form-section .sub {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0d0d0d;
+      color: #888;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.8rem;
+    }
+    footer a { color: #aaaaaa; text-decoration: none; }
+    footer a:hover { color: #ffffff; }
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1.25rem 2rem; }
+      main { padding: 2rem 1.25rem 4rem; }
+      .form-section { padding: 1.75rem 1.25rem; }
+      .tier-table { font-size: 0.8rem; }
+      .tier-table th, .tier-table td { padding: 0.5rem 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="brand" href="https://apomarchives.com/index.html">APOM RESEARCH</a>
+  <ul>
+    <li><a href="https://apomarchives.com/index.html#services">Services</a></li>
+    <li><a href="https://apomarchives.com/digital-evidence.html">Evidence</a></li>
+    <li><a href="https://apomarchives.com/referrals.html">Referrals</a></li>
+    <li><a href="https://apomarchives.com/products.html">Products</a></li>
+    <li><a href="https://apomarchives.com/survivors.html">Survivors</a></li>
+    <li><a href="https://apomarchives.com/books.html">Book</a></li>
+    <li><a href="https://safety.apomarchives.com">Safety Audit</a></li>
+    <li><a href="https://calendly.com/apom-research/discovery">Schedule</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="eyebrow">For Family Law &amp; Civil Litigation Attorneys</p>
+  <h1>The Strategic Legal Partnership</h1>
+  <p>An embedded digital forensics investigator for your firm — working across all active matters from intake through trial.</p>
+  <span class="badge">Accepting a limited number of partnerships</span>
+</div>
+
+<!-- MAIN -->
+<main>
+
+  <!-- WHAT IS IT -->
+  <section style="margin-bottom:3rem;">
+    <p class="section-label">The Problem</p>
+    <h2>Every missed preservation window is a lost case.</h2>
+    <p>The reactive model — calling in a digital forensics expert after the damage is done — is the most expensive way to handle digital evidence. Platform data ages out in days. Fabricated evidence goes unchallenged. Preservation windows close before anyone thinks to act.</p>
+    <p>The embedded model solves this before it starts.</p>
+
+    <div class="callout">
+      <p>"Every unchallenged fabricated screenshot is a liability. Every call that starts with 'we already submitted the evidence' is a conversation that should have happened at intake."</p>
+    </div>
+
+    <p class="section-label" style="margin-top:2rem;">What Embedded Looks Like</p>
+    <h2>From intake to verdict.</h2>
+
+    <div class="intake-grid">
+      <div class="intake-card">
+        <div class="step">New client at intake</div>
+        <h3>Preservation — Immediately</h3>
+        <p>Two-line checklist back within the hour. Preservation letters out before the first hearing. Evidence locked before it ages out.</p>
+      </div>
+      <div class="intake-card">
+        <div class="step">Opposing evidence submitted</div>
+        <h3>Fabrication Screening</h3>
+        <p>Forward it to me. I examine metadata, formatting, and timestamps. If it's fabricated, you know before you walk into that courtroom.</p>
+      </div>
+      <div class="intake-card">
+        <div class="step">Heading to trial</div>
+        <h3>Rule 1006 Ready</h3>
+        <p>Voluminous platform records become a Rule 1006 summary exhibit — court-ready, jury-legible, admissible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section class="tier-section">
+    <p class="section-label">Retainer Tiers</p>
+    <h2>One monthly fee covers your firm across all active matters.</h2>
+    <p style="margin-bottom:1.5rem;">Two partnership spots available per quarter.</p>
+
+    <table class="tier-table">
+      <thead>
+        <tr>
+          <th>What's Included</th>
+          <th class="tier-name">Foundation<br><span style="font-weight:400;font-size:0.8rem;color:#aaa;">$5,000/mo · Solo &amp; small firms</span></th>
+          <th class="tier-name">Core<br><span style="font-weight:400;font-size:0.8rem;color:#aaa;">$8,000/mo · Mid-size firms</span></th>
+          <th class="tier-name">Full Spectrum<br><span style="font-weight:400;font-size:0.8rem;color:#aaa;">$12,000/mo · High-volume &amp; trial</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Embedded investigator across all active matters</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Same-day preservation letter response</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Platform subpoena strategy &amp; guidance</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Federal-Grade Evidence Toolkit (full team)</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Monthly case briefing</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Work product protection</td><td class="check">✓</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Opposing evidence fabrication screening</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Same-day response SLA</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Dedicated investigation hours included</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Paralegal training sessions</td><td class="dash">—</td><td class="check">✓</td><td class="check">✓</td></tr>
+        <tr><td>Rule 1006 summary exhibit preparation</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Statistical probability analysis (FRE 702)</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Trial exhibit architecture for jury presentation</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Network mapping &amp; entity analysis</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>FBI &amp; law enforcement referral packages</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Quarterly strategy briefing</td><td class="dash">—</td><td class="dash">—</td><td class="check">✓</td></tr>
+        <tr><td>Advisory hours/month</td><td>15–20 hrs</td><td>25–30 hrs</td><td>40+ hrs</td></tr>
+        <tr><td>Response SLA</td><td>Next business day</td><td>Same business day</td><td>Same day, priority</td></tr>
+      </tbody>
+    </table>
+    <p class="tier-note">Month-to-month with 30-day notice to terminate. Engagement agreement runs between the law firm and APOM Research. All work performed under attorney supervision and structured as attorney work product — protected from opposing counsel the same way your own work product is. Full investigations requiring dedicated multi-week scope are quoted separately regardless of tier.</p>
+  </section>
+
+  <!-- WHO IS THIS FOR -->
+  <section style="margin-bottom:3rem;">
+    <p class="section-label">Is This Right for Your Firm?</p>
+    <h2>The Strategic Legal Partnership is designed for attorneys who:</h2>
+    <ul class="for-list">
+      <li>Handle family law, civil stalking, or harassment litigation regularly</li>
+      <li>Are tired of digital evidence getting challenged or excluded at trial</li>
+      <li>Want fabricated opposing evidence identified before it misleads the court</li>
+      <li>Need preservation letters out at intake — not three weeks into the case</li>
+      <li>Want a forensics expert integrated into the team, not parachuted in at the last minute</li>
+      <li>Handle enough active matters that a per-case model is inefficient</li>
+    </ul>
+    <p>If your firm handles one or two digital evidence cases per year, a per-case engagement is likely a better fit. <a href="https://apomarchives.com/index.html#services" style="color:#c8964a;">View all services →</a></p>
+  </section>
+
+  <!-- FORM -->
+  <section class="form-section">
+    <p class="section-label">Apply</p>
+    <h2>Request a Partnership</h2>
+    <p class="sub">We review all applications personally. Qualified applicants will be contacted within 48 hours to discuss fit and next steps.</p>
+
+    <iframe data-tally-src="https://tally.so/embed/2EbXpD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2179" frameborder="0" marginheight="0" marginwidth="0" title="Strategic Legal Partnership - Application"></iframe>
+    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div>© 2026 APOM Research | Strategic Intelligence Services</div>
+  <div class="footer-links">
+    <a href="https://apomarchives.com/index.html">Home</a>
+    <a href="https://apomarchives.com/index.html#services">Services</a>
+    <a href="https://apomarchives.com/digital-evidence.html">Why Digital Evidence?</a>
+    <a href="https://apomarchives.com/referrals.html">Referral Program</a>
+    <a href="https://apomarchives.com/products.html">Products</a>
+    <a href="https://apomarchives.com/survivors.html">Survivors</a>
+    <a href="https://apomarchives.com/books.html">Book</a>
+    <a href="https://safety.apomarchives.com">Safety Audit</a>
+    <a href="https://www.linkedin.com/company/apom-research">LinkedIn</a>
+    <a href="https://apomarchives.com/privacy-policy.html">Privacy Policy</a>
+  </div>
+</footer>
+
+</body>
+</html>
