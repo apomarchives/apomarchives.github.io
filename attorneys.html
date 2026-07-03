@@ -105,10 +105,10 @@
     .standards-block { background: #faf9f7; border: 1px solid #e8e4de; border-radius: 8px; padding: 28px 32px; margin-bottom: 28px; }
     .standards-block p { color: #444; line-height: 1.8; margin-bottom: 16px; font-size: 1rem; }
     .standards-block ul { list-style: none; }
-    .standards-block li { color: #444; padding: 10px 0 10px 18px; position: relative; border-bottom: 1px solid #e8e4de; font-size: 0.97rem; line-height: 1.6; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+    .standards-block li { color: #444; padding: 10px 0 10px 0; border-bottom: 1px solid #e8e4de; font-size: 0.97rem; line-height: 1.8; }
     .standards-block li:last-child { border-bottom: none; }
-    .standards-block li::before { content: "\2023"; position: absolute; left: 0; color: #c8964a; }
-    .standards-block .standard-tag { display: inline-block; background: #0d0d0d; color: #c8964a; font-size: 0.72rem; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 3px; vertical-align: middle; flex-shrink: 0; }
+    
+    .standards-block .standard-tag { display: inline-block; background: #0d0d0d; color: #c8964a; font-size: 0.72rem; letter-spacing: 0.06em; padding: 2px 8px; border-radius: 3px; vertical-align: middle; margin-right: 8px; }
 
     /* CASE TYPES GRID */
     .case-types-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 40px; }
@@ -329,11 +329,11 @@
     <div class="standards-block">
       <p>Every evidence package is constructed to meet the authentication requirements courts actually apply:</p>
       <ul>
-        <li>Documented collection methodology with hash verification <span class="standard-tag">FRE 901(b)(9)</span></li>
-        <li>Machine-generated records with hash certification <span class="standard-tag">FRE 902(13-14)</span></li>
-        <li>Documented handling from collection through court submission with no evidentiary gaps <span class="standard-tag">Chain of Custody</span></li>
-        <li>Timestamp verification distinguishing capture time from post time, with platform-native confirmation <span class="standard-tag">Metadata Integrity</span></li>
-        <li>Packages structured to federal referral requirements for interstate harassment and cyberstalking cases <span class="standard-tag">FBI Standards</span></li>
+        <li><span class="standard-tag">FRE 901(b)(9)</span> Documented collection methodology with hash verification</li>
+        <li><span class="standard-tag">FRE 902(13-14)</span> Machine-generated records with hash certification</li>
+        <li><span class="standard-tag">Chain of Custody</span> Documented handling from collection through court submission with no evidentiary gaps</li>
+        <li><span class="standard-tag">Metadata Integrity</span> Timestamp verification distinguishing capture time from post time, with platform-native confirmation</li>
+        <li><span class="standard-tag">FBI Standards</span> Packages structured to federal referral requirements for interstate harassment and cyberstalking cases</li>
       </ul>
       <p style="margin-top: 16px; font-size: 0.9rem; color: #666;">Work product can be structured to support attorney-client privilege where applicable. Expert witness testimony available on request.</p>
     </div>
