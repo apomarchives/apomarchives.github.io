@@ -48,9 +48,11 @@
   .two { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px,4.5vw,54px); align-items: center; }
   .card { background: #fff; border: 1px solid #F3E3E9; border-radius: 24px; padding: clamp(26px,3.4vw,38px); }
   ul { list-style: none; }
+  @media (max-width: 900px) {
+    .two { grid-template-columns: 1fr !important; }
+  }
   @media (max-width: 760px) {
     .nav-links { display: none; }
-    .two { grid-template-columns: 1fr; }
   }
 </style>
 </head>
