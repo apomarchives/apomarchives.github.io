@@ -625,7 +625,7 @@ footer .wrap { padding-block: 32px 40px; display: grid; gap: 18px; }
     F.add('who', 'Unique image ID', ex[0xA420], 'ImageUniqueID');
     var dto = ex[0x9003] || i0[0x132];
     if (dto) F.add('when', 'Date taken', fmtExifDate(dto), ex[0x9003] ? 'DateTimeOriginal' : 'DateTime');
-    if (ex[0x9011] || ex[0x9010]) F.add('loc', 'Time zone (hints at your region)', 'UTC' + (ex[0x9011] || ex[0x9010]), 'OffsetTimeOriginal');
+    if (ex[0x9011] || ex[0x9010]) F.add('region', 'Time zone (hints at your region)', 'UTC' + (ex[0x9011] || ex[0x9010]), 'OffsetTimeOriginal');
     if (i0[0x132] && ex[0x9003] && i0[0x132] !== ex[0x9003]) F.add('when', 'Last edited', fmtExifDate(i0[0x132]), 'DateTime');
     F.add('extra', 'Description', i0[0x10E], 'ImageDescription');
     F.add('extra', 'Comment', bytesText(ex[0x9286]), 'UserComment');
@@ -1039,7 +1039,6 @@ footer .wrap { padding-block: 32px 40px; display: grid; gap: 18px; }
   function keyInfo(k) {
     var l = k.toLowerCase();
     if (/location\.iso6709$/.test(l) || /^location(-[a-z]{3})?$/.test(l) || /\.location$/.test(l)) return ['loc', 'Exact location'];
-    if (/^(major_brand|minor_version|compatible_brands)$/.test(l)) return ['skip'];
     if (l === 'encoder' || /\.encoder$/.test(l)) return ['who', 'Recording app'];
     if (l.indexOf('location.accuracy') >= 0) return ['loc', 'Accurate to within'];
     if (l.indexOf('location.name') >= 0) return ['loc', 'Place name'];
@@ -1183,6 +1182,7 @@ footer .wrap { padding-block: 32px 40px; display: grid; gap: 18px; }
   var ICON = {
     loc: '<svg class="icn" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>',
     who: '<svg class="icn" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>',
+    region: '<svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18"/></svg>',
     when: '<svg class="icn" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
     extra: '<svg class="icn" viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h10"/></svg>',
     check: '<svg class="icn" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
@@ -1198,7 +1198,7 @@ footer .wrap { padding-block: 32px 40px; display: grid; gap: 18px; }
     fb: '<svg class="icn" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M15 8h-1.5A1.5 1.5 0 0 0 12 9.5V21"/><path d="M9.5 13h5"/></svg>',
     tg: '<svg class="icn" viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 5 4 2-15z"/><path d="M9 13l8-6"/></svg>'
   };
-  var CATS = [['loc', 'Where it was taken'], ['who', 'The phone and the person'], ['when', 'When it was taken'], ['extra', 'Other hidden data']];
+  var CATS = [['loc', 'Where it was taken'], ['region', 'Hints about your region'], ['who', 'The phone and the person'], ['when', 'When it was taken'], ['extra', 'Other hidden data']];
 
   function pinSvg(lat, lon) {
     var x = 23 + ((lon * 1000) % 7), y = 21 + ((lat * 1000) % 5);
@@ -1383,7 +1383,7 @@ footer .wrap { padding-block: 32px 40px; display: grid; gap: 18px; }
     { cat: 'who', label: 'Phone or camera model', value: 'iPhone 15 Pro', field: 'Model' },
     { cat: 'who', label: 'Software version', value: '18.6.2', field: 'Software' },
     { cat: 'when', label: 'Date taken', value: 'Mar 14, 2026 at 6:22 PM', field: 'DateTimeOriginal' },
-    { cat: 'loc', label: 'Time zone (hints at your region)', value: 'UTC-05:00', field: 'OffsetTimeOriginal' },
+    { cat: 'region', label: 'Time zone (hints at your region)', value: 'UTC-05:00', field: 'OffsetTimeOriginal' },
     { cat: 'extra', label: 'Hidden extra image', value: 'A second image tucked inside the file, often a depth map or HDR layer', field: 'MPF / trailing data' }
   ];
   var ex = cardShell('IMG_4127.JPG', '2.4 MB · JPEG', ICON.photo, 'Example');
