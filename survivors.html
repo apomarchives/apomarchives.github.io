@@ -107,8 +107,8 @@
       <div id="app-card" style="background:#FFF6F0;border-radius:26px;padding:clamp(26px,3.5vw,38px);box-shadow:0 20px 50px rgba(0,0,0,0.28);">
         <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#3A2130;line-height:1.2;margin-bottom:10px;">StayGone is here</div>
         <p style="font-size:15px;color:#7A5566;line-height:1.6;margin-bottom:22px;">Available now on the App Store. Start your first sweep in a few minutes.</p>
-        <a href="https://apps.apple.com/us/app/staygone/id6793166808" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;width:100%;color:#fff;background:#111014;border-radius:14px;padding:16px 20px;min-height:56px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.02-2.05 1.68-3.03 1.75-3.08-0.95-1.4-2.44-1.59-2.97-1.61-1.26-.13-2.47.74-3.11.74-.64 0-1.63-.72-2.68-.7-1.38.02-2.65.8-3.36 2.03-1.43 2.49-.37 6.17 1.03 8.19.68.99 1.49 2.1 2.56 2.06 1.03-.04 1.42-.67 2.66-.67 1.24 0 1.59.67 2.67.65 1.1-.02 1.8-1 2.48-2 .78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29zM15.1 5.82c.56-.68.94-1.62.84-2.57-.81.03-1.79.54-2.37 1.22-.52.6-.97 1.56-.85 2.48.9.07 1.82-.46 2.38-1.13z"/></svg><span style="display:flex;flex-direction:column;line-height:1.15;"><span style="font-size:10px;opacity:.8;">Download on the</span><span style="font-size:17px;font-weight:600;font-family:'Playfair Display',serif;">App Store</span></span></a>
-        <p style="font-size:12.5px;color:#AE93A0;line-height:1.5;margin-top:14px;">$29.99/month, cancel anytime. On Android? <a href="https://apom-research.myflodesk.com/staygone-waitlist" target="_blank" rel="noopener" style="font-weight:600;">Get notified</a> when the Android version lands.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px;"><a href="https://apps.apple.com/us/app/staygone/id6793166808" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;flex:1 1 170px;color:#fff;background:#111014;border-radius:14px;padding:16px 20px;min-height:56px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 12.54c-.02-2.05 1.68-3.03 1.75-3.08-0.95-1.4-2.44-1.59-2.97-1.61-1.26-.13-2.47.74-3.11.74-.64 0-1.63-.72-2.68-.7-1.38.02-2.65.8-3.36 2.03-1.43 2.49-.37 6.17 1.03 8.19.68.99 1.49 2.1 2.56 2.06 1.03-.04 1.42-.67 2.66-.67 1.24 0 1.59.67 2.67.65 1.1-.02 1.8-1 2.48-2 .78-1.15 1.1-2.26 1.12-2.32-.02-.01-2.15-.83-2.17-3.29zM15.1 5.82c.56-.68.94-1.62.84-2.57-.81.03-1.79.54-2.37 1.22-.52.6-.97 1.56-.85 2.48.9.07 1.82-.46 2.38-1.13z"/></svg><span style="display:flex;flex-direction:column;line-height:1.15;"><span style="font-size:10px;opacity:.8;">Download on the</span><span style="font-size:17px;font-weight:600;font-family:'Playfair Display',serif;">App Store</span></span></a><a href="https://play.google.com/store/apps/details?id=com.apomresearch.courtcompanion" target="_blank" rel="noopener" aria-label="Get StayGone on Google Play" style="display:inline-flex;align-items:center;"><img src="/assets/google-play-badge.png" alt="Get it on Google Play" style="height:94px;width:auto;display:block;margin:-15.42px;"></a></div>
+        <p style="font-size:12.5px;color:#AE93A0;line-height:1.5;margin-top:14px;">$29.99/month, cancel anytime.</p>
       </div>
     </div>
   </section>
@@ -284,5 +284,9 @@
     </div>
   </footer>
 </div>
+<script>
+(function(){Array.prototype.forEach.call(document.querySelectorAll('a[href*="play.google.com"]'),function(a){
+a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','play_store_click',{link_url:a.href});});});})();
+</script>
 </body>
 </html>

@@ -419,7 +419,7 @@ footer .wrap { padding-block: 32px 40px; display: grid; gap: 18px; }
             Get StayGone
           </a>
         </div>
-        <p style="margin-top:14px;font-size:14px;">On Android? <a href="https://apom-research.myflodesk.com/staygone-waitlist" style="color:inherit;text-decoration:underline;">Get notified the day it lands</a></p>
+        <p style="margin-top:14px;font-size:14px;">On Android? <a href="https://play.google.com/store/apps/details?id=com.apomresearch.courtcompanion" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Get it on Google Play</a></p>
       </div>
       <div class="list-card">
         <h3>Get the next free tool first</h3>
@@ -1534,6 +1534,10 @@ window.CC_I18N = {"ar":{"by StayGone":"من StayGone","Language":"اللغة","O
 (function(){var b=document.getElementById('theme-btn'),l=document.getElementById('theme-label'),r=document.documentElement;
 function sync(){l.textContent=r.getAttribute('data-theme')==='dark'?'Light mode':'Dark mode';}
 sync();b.addEventListener('click',function(){var n=r.getAttribute('data-theme')==='dark'?'light':'dark';r.setAttribute('data-theme',n);try{localStorage.setItem('cc-theme',n);}catch(e){}sync();});})();
+</script>
+<script>
+(function(){Array.prototype.forEach.call(document.querySelectorAll('a[href*="play.google.com"]'),function(a){
+a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','play_store_click',{link_url:a.href});});});})();
 </script>
 </body>
 </html>
