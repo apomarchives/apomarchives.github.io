@@ -41,6 +41,16 @@
   .sg-btn-soft { display:inline-flex;align-items:center;gap:8px;background:#FAE9EF;color:#6E2340;font-weight:600;font-size:15.5px;padding:13px 22px;border-radius:999px;border:1px solid #F0D8E2; }
   .sg-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:26px;align-items:start; }
   .sg-grid-wide { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:22px;align-items:start; }
+  .sg-walk { display:grid;grid-template-columns:1fr;gap:26px;align-items:start; }
+  .sg-walk .sg-vid { order:0; }
+  .sg-walk .sg-txt { order:1; }
+  .sg-walk video { width:100%;max-width:300px; }
+  @media (min-width: 721px) {
+    .sg-walk { grid-template-columns:1fr 1fr; }
+    .sg-walk .sg-txt { order:0; }
+    .sg-walk .sg-vid { order:1; }
+    .sg-walk video { max-width:380px; }
+  }
   @media (max-width: 720px) {
     .sg-nav-inner { flex-wrap: wrap; gap: 12px 16px !important; padding: 12px 18px !important; }
     .sg-nav-links { order: 3; flex-basis: 100%; justify-content: flex-start !important; gap: 8px 18px !important; font-size: 13.5px !important; }
@@ -49,6 +59,8 @@
   }
   @media (max-width: 420px) {
     .sg-nav-links { display: none !important; }
+    .sg-hero-pill { display: none !important; }
+    .sg-h1 { font-size: 32px !important; }
   }
 </style>
 </head>
@@ -66,27 +78,28 @@
       </div>
     </div>
   </nav>
-  <header id="top" style="max-width:860px;margin:0 auto;padding:clamp(48px,7vw,92px) 24px clamp(36px,5vw,56px);text-align:center;">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:#FAE9EF;color:#B14468;font-size:12.5px;font-weight:700;letter-spacing:0.4px;padding:7px 14px;border-radius:999px;margin-bottom:22px;">
+  <header id="top" style="max-width:860px;margin:0 auto;padding:clamp(36px,6vw,92px) 24px clamp(20px,4vw,56px);text-align:center;">
+    <div class="sg-hero-pill" style="display:inline-flex;align-items:center;gap:8px;background:#FAE9EF;color:#B14468;font-size:12.5px;font-weight:700;letter-spacing:0.4px;padding:7px 14px;border-radius:999px;margin-bottom:22px;">
       <span style="width:7px;height:7px;border-radius:50%;background:#B14468;"></span>
       FOR SHELTERS AND ADVOCACY PROGRAMS
     </div>
-    <h1 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1px;color:#3A2130;margin-bottom:20px;">Free for the survivors you work with.</h1>
-    <p style="font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:#7A5566;max-width:640px;margin:0 auto;">StayGone is for women who've left, or are leaving, and are still being cyberstalked. Watch the two-minute walkthrough, then read how a client gets full access at no cost. If you have questions after that, book twenty minutes.</p>
+    <h1 class="sg-h1" style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1px;color:#3A2130;margin-bottom:20px;">Free for the survivors you work with.</h1>
+    <p style="font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:#7A5566;max-width:640px;margin:0 auto;">Watch the two-minute walkthrough, then read how a client gets full access at no cost.</p>
   </header>
 
   <section id="walkthrough" style="background:#FDF5F7;border-top:1px solid #F3E3E9;">
-    <div style="max-width:1080px;margin:0 auto;padding:clamp(56px,7vw,92px) 24px;" class="sg-grid">
-      <div>
+    <div style="max-width:1080px;margin:0 auto;padding:clamp(40px,6vw,92px) 24px;" class="sg-walk">
+      <div class="sg-vid">
+        <div style="display:flex;justify-content:center;"><video controls playsinline preload="metadata" poster="/staygone/media/staygone-advocate-walkthrough-poster.jpg" style="aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-advocate-walkthrough.mp4" type="video/mp4"></video></div>
+        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The walkthrough is captioned, so no sound is needed, and you're welcome to forward this page to anyone on your team.</p>
+      </div>
+      <div class="sg-txt">
         <div class="sg-eyebrow">Two-minute walkthrough</div>
         <h2 class="sg-h2">The app, exactly as your clients would see it.</h2>
+        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being cyberstalked.</p>
         <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">The guided safety audit walks her through every way he may still have a foothold: her phone, her accounts, her car, her home and her kids' devices. Each answer turns into a fix she can do that day, in plain words, in the order that keeps her safe.</p>
         <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">Beyond the audit, she gets a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence for signs of editing, and a discreet mode that disguises the app as an ordinary one if he picks up her phone.</p>
         <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">Everything she saves is encrypted on her own phone, kept out of cloud backups, and never copied to us, because there are no accounts and no server holding her evidence.</p>
-      </div>
-      <div>
-        <div style="display:flex;justify-content:center;"><video controls playsinline preload="metadata" poster="/staygone/media/staygone-advocate-walkthrough-poster.jpg" style="width:100%;max-width:380px;aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-advocate-walkthrough.mp4" type="video/mp4"></video></div>
-        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The walkthrough is captioned, so no sound is needed, and you're welcome to forward this page to anyone on your team.</p>
       </div>
     </div>
   </section>

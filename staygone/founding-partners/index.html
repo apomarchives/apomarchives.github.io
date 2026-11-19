@@ -41,6 +41,16 @@
   .sg-btn-soft { display:inline-flex;align-items:center;gap:8px;background:#FAE9EF;color:#6E2340;font-weight:600;font-size:15.5px;padding:13px 22px;border-radius:999px;border:1px solid #F0D8E2; }
   .sg-grid { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:26px;align-items:start; }
   .sg-grid-wide { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:22px;align-items:start; }
+  .sg-walk { display:grid;grid-template-columns:1fr;gap:26px;align-items:start; }
+  .sg-walk .sg-vid { order:0; }
+  .sg-walk .sg-txt { order:1; }
+  .sg-walk video { width:100%;max-width:300px; }
+  @media (min-width: 721px) {
+    .sg-walk { grid-template-columns:1fr 1fr; }
+    .sg-walk .sg-txt { order:0; }
+    .sg-walk .sg-vid { order:1; }
+    .sg-walk video { max-width:380px; }
+  }
   @media (max-width: 720px) {
     .sg-nav-inner { flex-wrap: wrap; gap: 12px 16px !important; padding: 12px 18px !important; }
     .sg-nav-links { order: 3; flex-basis: 100%; justify-content: flex-start !important; gap: 8px 18px !important; font-size: 13.5px !important; }
@@ -49,6 +59,8 @@
   }
   @media (max-width: 420px) {
     .sg-nav-links { display: none !important; }
+    .sg-hero-pill { display: none !important; }
+    .sg-h1 { font-size: 32px !important; }
   }
 </style>
 </head>
@@ -66,24 +78,26 @@
       </div>
     </div>
   </nav>
-  <header id="top" style="max-width:860px;margin:0 auto;padding:clamp(48px,7vw,92px) 24px clamp(36px,5vw,56px);text-align:center;">
-    <div style="display:inline-flex;align-items:center;gap:8px;background:#FAE9EF;color:#B14468;font-size:12.5px;font-weight:700;letter-spacing:0.4px;padding:7px 14px;border-radius:999px;margin-bottom:22px;">
+  <header id="top" style="max-width:860px;margin:0 auto;padding:clamp(36px,6vw,92px) 24px clamp(20px,4vw,56px);text-align:center;">
+    <div class="sg-hero-pill" style="display:inline-flex;align-items:center;gap:8px;background:#FAE9EF;color:#B14468;font-size:12.5px;font-weight:700;letter-spacing:0.4px;padding:7px 14px;border-radius:999px;margin-bottom:22px;">
       <span style="width:7px;height:7px;border-radius:50%;background:#B14468;"></span>
       FOUNDING PARTNERS
     </div>
-    <h1 style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1px;color:#3A2130;margin-bottom:20px;">Founding Partners.</h1>
+    <h1 class="sg-h1" style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1px;color:#3A2130;margin-bottom:20px;">Founding Partners.</h1>
     <p style="font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:#7A5566;max-width:640px;margin:0 auto;">You were doing this work before the app existed, and your clients are the women it was built for. This rate is double the standard one, and it never goes down. This page is by invitation. If it reached you by forward, the standard terms are at <a href="/staygone/affiliates/">apomarchives.com/staygone/affiliates/</a>.</p>
   </header>
 
   <section id="walkthrough" style="background:#FDF5F7;border-top:1px solid #F3E3E9;">
-    <div style="max-width:1080px;margin:0 auto;padding:clamp(56px,7vw,92px) 24px;" class="sg-grid">
-      <div>
+    <div style="max-width:1080px;margin:0 auto;padding:clamp(40px,6vw,92px) 24px;" class="sg-walk">
+      <div class="sg-vid">
+        <div style="display:flex;justify-content:center;"><video controls playsinline preload="metadata" poster="/staygone/media/staygone-affiliate-walkthrough-poster.jpg" style="aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-affiliate-walkthrough.mp4" type="video/mp4"></video></div>
+        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The walkthrough is captioned, so no sound is needed, and you're welcome to share it with your audience as it is.</p>
+      </div>
+      <div class="sg-txt">
         <div class="sg-eyebrow">Two-minute walkthrough</div>
         <h2 class="sg-h2">The app, exactly as your audience would see it.</h2>
         <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being watched. A guided safety audit, a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence, and a way to disguise the app as an ordinary one if he picks up her phone. Her evidence stays on her phone; we never hold a copy.</p>
-        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">Captioned, no sound needed. You're welcome to share it with your audience as it is.</p>
       </div>
-      <div style="display:flex;justify-content:center;"><video controls playsinline preload="metadata" poster="/staygone/media/staygone-affiliate-walkthrough-poster.jpg" style="width:100%;max-width:380px;aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-affiliate-walkthrough.mp4" type="video/mp4"></video></div>
     </div>
   </section>
 
