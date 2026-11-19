@@ -45,6 +45,28 @@
   .sg-walk .sg-vid { order:0; }
   .sg-walk .sg-txt { order:1; }
   .sg-walk video { width:100%;max-width:300px; }
+  .sg-vidwrap { position:relative;display:inline-block;max-width:100%; }
+  .sg-play { position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:#6E2340;border:0;cursor:pointer;box-shadow:0 10px 26px rgba(110,35,64,0.35);display:flex;align-items:center;justify-content:center;padding:0; }
+  .sg-play svg { display:block;margin-left:4px; }
+  .sg-play[hidden] { display:none; }
+  .sg-mobile-only { display:none; }
+  .sg-desk-only { display:block; }
+  .sg-more > summary { list-style:none;cursor:pointer;color:#B14468;font-weight:600;font-size:15px;padding:6px 0; }
+  .sg-more > summary::-webkit-details-marker { display:none; }
+  .sg-more[open] > summary { display:none; }
+  .sg-kit > summary { list-style:none;cursor:pointer;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B14468;display:flex;justify-content:space-between;align-items:center; }
+  .sg-kit > summary::-webkit-details-marker { display:none; }
+  .sg-kit > summary::after { content:'+';font-size:18px;font-weight:400;color:#B14468; }
+  .sg-kit[open] > summary::after { content:'3'; }
+  .sg-kit[open] > summary { margin-bottom:14px; }
+  .sg-yr { display:none; }
+  @media (max-width: 720px) {
+    .sg-mobile-only { display:block; }
+    .sg-desk-only { display:none; }
+    .sg-access .sg-steps { order:-1; }
+    .sg-earn th:nth-child(3), .sg-earn td:nth-child(3) { display:none; }
+    .sg-yr { display:block;font-size:12.5px;color:#AE93A0;margin-top:2px; }
+  }
   @media (min-width: 721px) {
     .sg-walk { grid-template-columns:1fr 1fr; }
     .sg-walk .sg-txt { order:0; }
@@ -90,16 +112,26 @@
   <section id="walkthrough" style="background:#FDF5F7;border-top:1px solid #F3E3E9;">
     <div style="max-width:1080px;margin:0 auto;padding:clamp(40px,6vw,92px) 24px;" class="sg-walk">
       <div class="sg-vid">
-        <div style="display:flex;justify-content:center;"><video controls playsinline preload="metadata" poster="/staygone/media/staygone-advocate-walkthrough-poster.jpg" style="aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-advocate-walkthrough.mp4" type="video/mp4"></video></div>
-        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The walkthrough is captioned, so no sound is needed, and you're welcome to forward this page to anyone on your team.</p>
+        <div style="display:flex;justify-content:center;"><div class="sg-vidwrap"><video id="sg-video-advocate" controls playsinline preload="metadata" poster="/staygone/media/staygone-advocate-walkthrough-poster.jpg" style="aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-advocate-walkthrough.mp4" type="video/mp4"></video><button type="button" class="sg-play" aria-label="Play the walkthrough" data-video="sg-video-advocate"><svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div></div>
+        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The video is captioned, and you're welcome to forward this page to anyone on your team.</p>
+        <div class="sg-mobile-only" style="text-align:center;margin-top:16px;"><a class="sg-btn" href="https://calendar.proton.me/bookings#yqsJnwrluKaqzZJbMTbYQcYsVBSU3knHUZij5s8LoMQ=" target="_blank" rel="noopener">Book twenty minutes</a></div>
       </div>
       <div class="sg-txt">
-        <div class="sg-eyebrow">Two-minute walkthrough</div>
-        <h2 class="sg-h2">The app, exactly as your clients would see it.</h2>
-        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being cyberstalked.</p>
-        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">The guided safety audit walks her through every way he may still have a foothold: her phone, her accounts, her car, her home and her kids' devices. Each answer turns into a fix she can do that day, in plain words, in the order that keeps her safe.</p>
-        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">Beyond the audit, she gets a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence for signs of editing, and a discreet mode that disguises the app as an ordinary one if he picks up her phone.</p>
-        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">Everything she saves is encrypted on her own phone, kept out of cloud backups, and never copied to us, because there are no accounts and no server holding her evidence.</p>
+        <div class="sg-eyebrow">Walkthrough</div>
+        <h2 class="sg-h2">The whole app in two minutes.</h2>
+        <div class="sg-desk-only">
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being cyberstalked.</p>
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">The guided safety audit walks her through every way he may still have a foothold: her phone, her accounts, her car, her home and her kids' devices. Each answer turns into a fix she can do that day, in plain words, in the order that keeps her safe.</p>
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">Beyond the audit, she gets a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence for signs of editing, and a discreet mode that disguises the app as an ordinary one if he picks up her phone.</p>
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">Everything she saves is encrypted on her own phone, kept out of cloud backups, and never copied to us, because there are no accounts and no server holding her evidence.</p>
+        </div>
+        <div class="sg-mobile-only">
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being cyberstalked. The guided safety audit walks her through every way he may still have a foothold: her phone, her accounts, her car, her home and her kids' devices. Each answer turns into a fix she can do that day, in plain words, in the order that keeps her safe.</p>
+          <details class="sg-more"><summary>Read more</summary>
+            <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">Beyond the audit, she gets a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence for signs of editing, and a discreet mode that disguises the app as an ordinary one if he picks up her phone.</p>
+            <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">Everything she saves is encrypted on her own phone, kept out of cloud backups, and never copied to us, because there are no accounts and no server holding her evidence.</p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
@@ -111,7 +143,7 @@
     <p style="font-family:'Playfair Display',serif;font-size:18px;font-weight:600;color:#B14468;">Run it at intake.</p>
   </section>
 
-  <section id="access" style="max-width:1080px;margin:0 auto;padding:clamp(56px,7vw,92px) 24px;" class="sg-grid">
+  <section id="access" style="max-width:1080px;margin:0 auto;padding:clamp(56px,7vw,92px) 24px;" class="sg-grid sg-access">
     <div>
       <div class="sg-eyebrow">Free access</div>
       <h2 class="sg-h2">Nothing on a card, nothing on a statement.</h2>
@@ -120,7 +152,7 @@
       <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">I'm Kyērstin O'Neal, the founder, and I unlock each one myself, usually within a day. The Support ID is a random string that identifies her install and nothing else. It carries no name, no email and no phone number.</p>
       <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">It's hers, not the program's: it stays free after she leaves your program, and if she changes phones she sends me the new Support ID and I unlock it again.</p>
     </div>
-    <div class="sg-card">
+    <div class="sg-card sg-steps">
       <div style="font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#3E7A52;margin-bottom:18px;">How a client gets it</div>
       <div style="display:flex;flex-direction:column;gap:16px;">
         <div style="display:flex;gap:14px;align-items:flex-start;"><span style="flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:#6E2340;color:#FFF6F0;font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;">1</span><p style="font-size:15.5px;line-height:1.6;color:#5A4450;padding-top:4px;">She installs StayGone from the <a href="https://apps.apple.com/app/apple-store/id6793166808?pt=129200411&ct=sales-page&mt=8" target="_blank" rel="noopener">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.apomresearch.courtcompanion" target="_blank" rel="noopener">Google Play</a>, and on the subscription screen she taps Copy on her Support ID. She doesn't enter a card number or pay anything.</p></div>
@@ -140,7 +172,7 @@
     </div>
   </section>
 
-  <section id="questions" style="max-width:720px;margin:0 auto;padding:clamp(56px,7vw,92px) 24px;text-align:center;">
+  <section id="questions" style="max-width:720px;margin:0 auto;padding:clamp(40px,5vw,64px) 24px clamp(56px,7vw,92px);text-align:center;">
     <div>
       <div class="sg-eyebrow">Questions</div>
       <h2 class="sg-h2">Watched the demo and want to talk it through?</h2>
@@ -187,5 +219,18 @@
     </div>
   </footer>
 </div>
+<noscript><style>.sg-play{display:none}</style></noscript>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.sg-play');
+  for(var i=0;i<btns.length;i++){(function(b){
+    var v=document.getElementById(b.getAttribute('data-video'));
+    if(!v){b.hidden=true;return;}
+    b.addEventListener('click',function(){v.play();});
+    v.addEventListener('play',function(){b.hidden=true;});
+    v.addEventListener('pause',function(){if(v.currentTime===0){b.hidden=false;}});
+  })(btns[i]);}
+})();
+</script>
 </body>
 </html>

@@ -45,6 +45,28 @@
   .sg-walk .sg-vid { order:0; }
   .sg-walk .sg-txt { order:1; }
   .sg-walk video { width:100%;max-width:300px; }
+  .sg-vidwrap { position:relative;display:inline-block;max-width:100%; }
+  .sg-play { position:absolute;left:50%;top:50%;width:72px;height:72px;margin:-36px 0 0 -36px;border-radius:50%;background:#6E2340;border:0;cursor:pointer;box-shadow:0 10px 26px rgba(110,35,64,0.35);display:flex;align-items:center;justify-content:center;padding:0; }
+  .sg-play svg { display:block;margin-left:4px; }
+  .sg-play[hidden] { display:none; }
+  .sg-mobile-only { display:none; }
+  .sg-desk-only { display:block; }
+  .sg-more > summary { list-style:none;cursor:pointer;color:#B14468;font-weight:600;font-size:15px;padding:6px 0; }
+  .sg-more > summary::-webkit-details-marker { display:none; }
+  .sg-more[open] > summary { display:none; }
+  .sg-kit > summary { list-style:none;cursor:pointer;font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B14468;display:flex;justify-content:space-between;align-items:center; }
+  .sg-kit > summary::-webkit-details-marker { display:none; }
+  .sg-kit > summary::after { content:'+';font-size:18px;font-weight:400;color:#B14468; }
+  .sg-kit[open] > summary::after { content:'3'; }
+  .sg-kit[open] > summary { margin-bottom:14px; }
+  .sg-yr { display:none; }
+  @media (max-width: 720px) {
+    .sg-mobile-only { display:block; }
+    .sg-desk-only { display:none; }
+    .sg-access .sg-steps { order:-1; }
+    .sg-earn th:nth-child(3), .sg-earn td:nth-child(3) { display:none; }
+    .sg-yr { display:block;font-size:12.5px;color:#AE93A0;margin-top:2px; }
+  }
   @media (min-width: 721px) {
     .sg-walk { grid-template-columns:1fr 1fr; }
     .sg-walk .sg-txt { order:0; }
@@ -84,19 +106,28 @@
       FOUNDING PARTNERS
     </div>
     <h1 class="sg-h1" style="font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1px;color:#3A2130;margin-bottom:20px;">Founding Partners.</h1>
-    <p style="font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:#7A5566;max-width:640px;margin:0 auto;">You were doing this work before the app existed, and your clients are the women it was built for. This rate is double the standard one, and it never goes down. This page is by invitation. If it reached you by forward, the standard terms are at <a href="/staygone/affiliates/">apomarchives.com/staygone/affiliates/</a>.</p>
+    <p style="font-size:clamp(17px,1.5vw,19.5px);line-height:1.6;color:#7A5566;max-width:640px;margin:0 auto;">You were doing this work before the app existed, and your clients are the women it was built for. This rate is double the standard one, and it never goes down.</p>
   </header>
 
   <section id="walkthrough" style="background:#FDF5F7;border-top:1px solid #F3E3E9;">
     <div style="max-width:1080px;margin:0 auto;padding:clamp(40px,6vw,92px) 24px;" class="sg-walk">
       <div class="sg-vid">
-        <div style="display:flex;justify-content:center;"><video controls playsinline preload="metadata" poster="/staygone/media/staygone-affiliate-walkthrough-poster.jpg" style="aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-affiliate-walkthrough.mp4" type="video/mp4"></video></div>
-        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The walkthrough is captioned, so no sound is needed, and you're welcome to share it with your audience as it is.</p>
+        <div style="display:flex;justify-content:center;"><div class="sg-vidwrap"><video id="sg-video-affiliate" controls playsinline preload="metadata" poster="/staygone/media/staygone-affiliate-walkthrough-poster.jpg" style="aspect-ratio:9/16;border-radius:16px;background:#3A2130;box-shadow:0 16px 40px rgba(58,33,48,0.14);display:block;"><source src="/staygone/media/staygone-affiliate-walkthrough.mp4" type="video/mp4"></video><button type="button" class="sg-play" aria-label="Play the walkthrough" data-video="sg-video-affiliate"><svg width="28" height="28" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button></div></div>
+        <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;text-align:center;max-width:380px;margin:14px auto 0;">The video is captioned, and you're welcome to share it with your audience as it is.</p>
+        <div class="sg-mobile-only" style="text-align:center;margin-top:16px;"><a class="sg-btn" href="mailto:hello@apomarchives.com">Get your link</a></div>
       </div>
       <div class="sg-txt">
-        <div class="sg-eyebrow">Two-minute walkthrough</div>
-        <h2 class="sg-h2">The app, exactly as your audience would see it.</h2>
-        <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being watched. A guided safety audit, a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence, and a way to disguise the app as an ordinary one if he picks up her phone. Her evidence stays on her phone; we never hold a copy.</p>
+        <div class="sg-eyebrow">Walkthrough</div>
+        <h2 class="sg-h2">The whole app in two minutes.</h2>
+        <div class="sg-desk-only">
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being watched. A guided safety audit, a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence, and a way to disguise the app as an ordinary one if he picks up her phone. Her evidence stays on her phone; we never hold a copy.</p>
+        </div>
+        <div class="sg-mobile-only">
+          <p style="font-size:16.5px;line-height:1.68;color:#7A5566;margin-bottom:18px;">StayGone is for women who've left, or are leaving, and are still being watched.</p>
+          <details class="sg-more"><summary>Read more</summary>
+            <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">A guided safety audit, a sealed evidence log (every file SHA-256 hashed), court-ready exports, a check on his evidence, and a way to disguise the app as an ordinary one if he picks up her phone. Her evidence stays on her phone; we never hold a copy.</p>
+          </details>
+        </div>
       </div>
     </div>
   </section>
@@ -116,11 +147,12 @@
           <div style="font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B14468;margin-bottom:8px;">What it adds up to</div>
           <p style="font-size:14.5px;line-height:1.6;color:#7A5566;">Full access is $29.99 a month. After the app store's share, about $25.49 reaches me, and 20% of that is yours for every month each client stays.</p>
         </div>
-        <table style="width:100%;border-collapse:collapse;font-size:15px;background:#fff;"><thead><tr style="background:#FDF3F7;"><th style="text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:#8F7581;">Clients subscribed</th><th style="text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:#8F7581;">You earn</th><th style="text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:#8F7581;">If they stay a year</th></tr></thead><tbody><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">10</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $51 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $612 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">25</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $127 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $1,529 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">50</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $255 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $3,059 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">100</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $510 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $6,118 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">500</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $2,549 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $30,588 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">1,000</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $5,098 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $61,176 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">2,500</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $12,745 a month</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $152,940 a year</td></tr></tbody></table>
+        <table class="sg-earn" style="width:100%;border-collapse:collapse;font-size:15px;background:#fff;"><thead><tr style="background:#FDF3F7;"><th style="text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:#8F7581;">Clients subscribed</th><th style="text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:#8F7581;">You earn</th><th style="text-align:left;padding:12px 14px;font-size:12.5px;letter-spacing:1px;text-transform:uppercase;color:#8F7581;">If they stay a year</th></tr></thead><tbody><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">10</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $51 a month<span class="sg-yr">about $612 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $612 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">25</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $127 a month<span class="sg-yr">about $1,529 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $1,529 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">50</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $255 a month<span class="sg-yr">about $3,059 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $3,059 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">100</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $510 a month<span class="sg-yr">about $6,118 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $6,118 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">500</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $2,549 a month<span class="sg-yr">about $30,588 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $30,588 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">1,000</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $5,098 a month<span class="sg-yr">about $61,176 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $61,176 a year</td></tr><tr><td style="padding:12px 14px;border-top:1px solid #F3E3E9;font-weight:600;color:#3A2130;">2,500</td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#3A2130;">about $12,745 a month<span class="sg-yr">about $152,940 a year</span></td><td style="padding:12px 14px;border-top:1px solid #F3E3E9;color:#7A5566;">about $152,940 a year</td></tr></tbody></table>
         <p style="padding:14px 24px 20px;font-size:13px;line-height:1.6;color:#AE93A0;">Rounded, in US dollars, before any taxes on your side. These recur: 50 clients who each stay six months is six of those checks. For scale: if 1% of a 100,000 audience subscribes, that's 1,000 clients.</p>
       </div>
     </div>
     <p style="font-size:14.5px;line-height:1.6;color:#7A5566;margin-top:26px;">Run a shelter or advocacy program instead? Survivors in your program get StayGone free, for life. <a href="/staygone/advocates/">That page is here.</a></p>
+    <p style="font-size:14.5px;line-height:1.6;color:#7A5566;margin-top:10px;">This page is by invitation. If it reached you by forward, the standard terms are at <a href="/staygone/affiliates/">apomarchives.com/staygone/affiliates/</a>.</p>
   </section>
 
   <section id="media" style="background:#FDF5F7;border-top:1px solid #F3E3E9;">
@@ -130,7 +162,7 @@
         <h2 class="sg-h2">Everything you need to write about StayGone.</h2>
         <p style="font-size:16.5px;line-height:1.68;color:#7A5566;">Copy any of this as it stands. For interviews, a quote, or a screenshot you don't see here, email <a href="mailto:hello@apomarchives.com">hello@apomarchives.com</a>.</p>
       </div>
-      <div class="sg-grid-wide">
+      <div class="sg-grid-wide sg-desk-only">
         <div class="sg-card">
           <div style="font-size:12.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:#B14468;margin-bottom:14px;">About StayGone</div>
           <p style="font-size:15.5px;line-height:1.65;color:#5A4450;">StayGone is a safety and evidence app for women who've left an abusive partner and are still being watched through their phones, accounts, cars and kids' devices. It walks her through finding every way he still has access, logs each incident with a tamper-evident seal, exports a court-ready record for her attorney or a police report, checks his evidence for signs of editing, and disguises itself as an ordinary app if he picks up her phone. Everything stays on her phone. There are no accounts, no analytics, and no copy anywhere else. Full access is $29.99 a month, and free for survivors through partner programs.</p>
@@ -164,6 +196,37 @@
           </div>
           <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;margin-top:16px;">Please don't crop, recolor or add text to the icon or wordmark. Screenshots on request.</p>
         </div>
+      </div>
+      <div class="sg-mobile-only">
+        <details class="sg-kit sg-card" style="margin-bottom:14px;"><summary>About StayGone</summary>
+          <p style="font-size:15.5px;line-height:1.65;color:#5A4450;">StayGone is a safety and evidence app for women who've left an abusive partner and are still being watched through their phones, accounts, cars and kids' devices. It walks her through finding every way he still has access, logs each incident with a tamper-evident seal, exports a court-ready record for her attorney or a police report, checks his evidence for signs of editing, and disguises itself as an ordinary app if he picks up her phone. Everything stays on her phone. There are no accounts, no analytics, and no copy anywhere else. Full access is $29.99 a month, and free for survivors through partner programs.</p>
+        </details>
+        <details class="sg-kit sg-card" style="margin-bottom:14px;"><summary>About the founder</summary>
+          <p style="font-size:15.5px;line-height:1.65;color:#5A4450;">Kyērstin O'Neal is a digital forensics investigator and the founder of APOM Research, where she documents technology-facilitated abuse for attorneys and survivors. Her cybersecurity background includes the Cybersecurity and Infrastructure Security Agency and Sandia National Laboratories. She wrote StayGone after clawing her way through family court as a mother being tracked and surveilled, and built it to be the tool she didn't have. She's the author of a book on digital evidence for attorneys and is writing its companion for survivors.</p>
+          <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;margin-top:12px;">StayGone and APOM Research aren't affiliated with, endorsed by, or representing any government entity.</p>
+        </details>
+        <details class="sg-kit sg-card" style="margin-bottom:14px;"><summary>Facts</summary>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.55;color:#3A2130;">
+            <div><span style="color:#8F7581;">Name</span><br>StayGone (listed as StayGone: Court Companion on Google Play)</div>
+            <div><span style="color:#8F7581;">Price</span><br>$29.99 a month, no free tier. Free for survivors through partner programs.</div>
+            <div><span style="color:#8F7581;">Platforms</span><br>iPhone and Android</div>
+            <div><span style="color:#8F7581;">Launched</span><br>2026 on the App Store, November 2026 on Google Play</div>
+            <div><span style="color:#8F7581;">Made by</span><br>APOM Research LLC, founded by Kyērstin O'Neal</div>
+            <div><span style="color:#8F7581;">Privacy</span><br>Evidence stays on the phone. No accounts, no analytics, no copy held by the company.</div>
+            <div><span style="color:#8F7581;">A note on wording</span><br>Analyze My Evidence is pattern analysis of her own entries. Legal references in the app say which laws may apply; they're indicators for a professional, never a verdict. Never say what the app disguises itself as.</div>
+          </div>
+        </details>
+        <details class="sg-kit sg-card" style="margin-bottom:14px;"><summary>Downloads</summary>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:15px;">
+            <a href="/staygone-lockup.png" download>StayGone wordmark (PNG)</a>
+            <a href="/staygone-icon.png" download>App icon (PNG)</a>
+            <a href="/staygone/og-image.png" download>Social card (PNG)</a>
+            <a href="/staygone/founder.jpg" download>Founder photo (JPG)</a>
+            <a href="/staygone/media/staygone-affiliate-walkthrough.mp4" download>Two-minute walkthrough (MP4)</a>
+            <a href="/staygone/">The sales page</a>
+          </div>
+          <p style="font-size:13.5px;line-height:1.6;color:#AE93A0;margin-top:16px;">Please don't crop, recolor or add text to the icon or wordmark. Screenshots on request.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -202,5 +265,18 @@
     </div>
   </footer>
 </div>
+<noscript><style>.sg-play{display:none}</style></noscript>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.sg-play');
+  for(var i=0;i<btns.length;i++){(function(b){
+    var v=document.getElementById(b.getAttribute('data-video'));
+    if(!v){b.hidden=true;return;}
+    b.addEventListener('click',function(){v.play();});
+    v.addEventListener('play',function(){b.hidden=true;});
+    v.addEventListener('pause',function(){if(v.currentTime===0){b.hidden=false;}});
+  })(btns[i]);}
+})();
+</script>
 </body>
 </html>
