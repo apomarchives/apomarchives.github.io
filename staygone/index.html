@@ -3,6 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9CP6Y9W5S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J9CP6Y9W5S');
+</script>
 <title>StayGone: Document Coercive Control and Cyberstalking for Court</title>
 <link rel="canonical" href="https://apomarchives.com/staygone/">
 <link rel="icon" type="image/png" href="/staygone/icon.png">
@@ -744,6 +752,10 @@
 <script>
 function sgCopy(btn){var u='https://apomarchives.com/staygone/';var l=btn&&btn.querySelector('.sg-copy-label');var done=function(){if(!l)return;l.textContent='Link copied';setTimeout(function(){l.textContent='Copy link';},2200);};if(navigator.clipboard){navigator.clipboard.writeText(u).then(done).catch(function(){});}else{done();}}
 function sgShare(){var d={title:'StayGone',text:'If your ex somehow always knows where you are, there is a name for it - and something you can do before court.',url:'https://apomarchives.com/staygone/'};if(navigator.share){navigator.share(d).catch(function(){});}else{sgCopy(document.querySelector('[onclick^="sgCopy"]'));}}
+</script>
+<script>
+(function(){Array.prototype.forEach.call(document.querySelectorAll('a[href*="play.google.com"]'),function(a){
+a.addEventListener('click',function(){if(typeof gtag==='function')gtag('event','play_store_click',{link_url:a.href});});});})();
 </script>
 </body>
 </html>
