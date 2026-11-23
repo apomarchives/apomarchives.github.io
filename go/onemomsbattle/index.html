@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>StayGone</title>
+<link rel="icon" type="image/png" href="/staygone/icon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9CP6Y9W5S"></script>
+<script>
+(function(){
+  var A="https://apps.apple.com/app/apple-store/id6793166808?pt=129200411&ct=onemomsbattle&mt=8", P="https://play.google.com/store/apps/details?id=com.apomresearch.courtcompanion&referrer=utm_source%3Donemomsbattle%26utm_medium%3Dpartner%26utm_campaign%3Donemomsbattle", S="https://apomarchives.com/staygone/";
+  var ua=navigator.userAgent||"";
+  var ios=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1);
+  var android=/Android/.test(ua);
+  var dest=ios?A:(android?P:S);
+  var gone=false;
+  function go(){if(gone)return;gone=true;window.location.replace(dest);}
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-J9CP6Y9W5S',{send_page_view:false});
+  gtag('event','affiliate_click',{partner:'onemomsbattle',platform:ios?'ios':(android?'android':'other'),transport_type:'beacon',event_callback:go});
+  setTimeout(go,800);
+})();
+</script>
+<style>
+body{margin:0;background:#FEF5F7;color:#3A2130;font-family:-apple-system,BlinkMacSystemFont,sans-serif;display:flex;min-height:100vh;align-items:center;justify-content:center;}
+.w{text-align:center;padding:24px;}
+a{display:block;margin:12px auto;max-width:260px;background:#6E2340;color:#FFF6F0;text-decoration:none;font-weight:600;padding:13px 22px;border-radius:999px;}
+</style>
+</head>
+<body>
+<div class="w">
+<a href="https://apps.apple.com/app/apple-store/id6793166808?pt=129200411&ct=onemomsbattle&mt=8">App Store</a>
+<a href="https://play.google.com/store/apps/details?id=com.apomresearch.courtcompanion&referrer=utm_source%3Donemomsbattle%26utm_medium%3Dpartner%26utm_campaign%3Donemomsbattle">Google Play</a>
+</div>
+</body>
+</html>
